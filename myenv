@@ -65,7 +65,7 @@ alias xandroid-studio="/home/alex/android-studio/bin/studio.sh &"
 alias xscprsa="storecmd 'cat ~/.ssh/id_rsa.pub |ssh \$1 -p 22 \"cat >> ~/.ssh/authorized_keys\" '"
 alias xopen="nautilus $1"
 
-alias envsync="mypwd=`pwd`;cd /tmp; rm -rf env;
+alias xenvsync="mypwd=`pwd`;cd /tmp; rm -rf env;
 		git clone https://github.com/xhsiung/env;
 		cp  env/myenv ~/.myenv
 		cd $mypwd"
