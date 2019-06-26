@@ -43,7 +43,6 @@ alias xdockContainer="storecmd 'docker ps -a'"
 alias xdockPs="storecmd 'docker ps -a'"
 alias xdockRun="storecmd  'docker run -it --name amuck_factor ubuntu:16.04'"
 
-
 ###alex ssh #############################################################################################
 alias xsshmail="ssh -p 50022 alex@mail.bais.com.tw"
 alias xsshhome="ssh alex@axsoho.asuscomm.com -p 59022"
@@ -58,6 +57,7 @@ alias xsshmedia2="ssh alex@192.168.35.65 -p 50023"
 alias xsshline="ssh alex@192.168.35.61"
 alias xsshNfRVNC="ssh -NfR 55900:localhost:5900 alex@axsoho.asuscomm.com -p 59022"
 
+alias xsshOffice="ssh alex@localhost -p 50022"
 #app ####################################################################################################
 alias xjupyter="cd ~/vcode/jupy/ ;/home/alex/anaconda3/bin/jupyter notebook --ip=172.16.39.139"
 alias xandroid-studio="/home/alex/android-studio/bin/studio.sh &"
@@ -65,7 +65,7 @@ alias xandroid-studio="/home/alex/android-studio/bin/studio.sh &"
 alias xscprsa="storecmd 'cat ~/.ssh/id_rsa.pub |ssh \$1 -p 22 \"cat >> ~/.ssh/authorized_keys\" '"
 alias xopen="nautilus $1"
 
-alias syncenv="mypwd=`pwd`;cd /tmp; rm -rf env;
+alias envsync="mypwd=`pwd`;cd /tmp; rm -rf env;
 		git clone https://github.com/xhsiung/env;
 		cp  env/myenv ~/.myenv
 		cd $mypwd"
