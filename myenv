@@ -62,8 +62,12 @@ alias xsshNfRVNC="ssh -NfR 55900:localhost:5900 alex@axsoho.asuscomm.com -p 5902
 alias xjupyter="cd ~/vcode/jupy/ ;/home/alex/anaconda3/bin/jupyter notebook --ip=172.16.39.139"
 alias xandroid-studio="/home/alex/android-studio/bin/studio.sh &"
 
-alias xscprsa="storecmd 'cat ~/.ssh/id_rsa.pub |ssh \$1 -p \$2 \"cat >> ~/.ssh/authorized_keys\" '"
+alias xscprsa="storecmd 'cat ~/.ssh/id_rsa.pub |ssh \$1 -p 22 \"cat >> ~/.ssh/authorized_keys\" '"
 alias xopen="nautilus $1"
 
+alias syncenv="mypwd=`pwd`;cd /tmp; rm -rf env;
+		git clone https://github.com/xhsiung/env;
+		cp  env/myenv ~/.myenv
+		cd $mypwd"
 #emulator
 tmux
