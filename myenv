@@ -76,13 +76,13 @@ alias xopen="nautilus $1 &"
 
 
 #syn env ################################################################################################
-alias xenvsync="mypwd=`pwd`;cd /tmp; rm -rf env;
+alias xenvsync="mypwd=`pwd`;cd ~;rm -rf env;
 		git clone https://github.com/xhsiung/env;
-		cp  -a env ~/.env ; 
+		mv env ~/.env ; 
 		ln -s ~/.env/tmux.conf ~/.tmux.conf ;
 		cd $mypwd"
 
-alias xenvpush="mypwd=`pwd`;cd /tmp/env; cp -a ~/.env/* .;
+alias xenvpush="mypwd=`pwd`;cd ~/.env;
 		git add .;
 		git commit -m 'fix myenv';
 		git push origin;
