@@ -25,6 +25,7 @@ fi
 
 git config --global user.email "xhsiung@gmail.com"
 git config --global user.name "xhsiung"
+git config --global push.default current
 
 storecmd(){
 	#history -c
