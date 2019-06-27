@@ -32,16 +32,16 @@ storecmd(){
 	echo "##########################################################################################"
 	echo "cmd: $1"
 	echo ""
-	echo "##########################################################################################"
 	history -r
 	#Ctrl + p --> paste
 }
 
 #docker #################################################################################################
+alias xdockBuild="storecmd 'docker build -t \$1 .'"
+alias xdockRun="storecmd  'docker run -it --name \$1 ubuntu:16.04'"
 alias xdockImage="storecmd 'docker images'"
 alias xdockContainer="storecmd 'docker ps -a'"
-alias xdockPs="storecmd 'docker ps -a'"
-alias xdockRun="storecmd  'docker run -it --name amuck_factor ubuntu:16.04'"
+alias xdockContainerPs="storecmd 'docker ps -a'"
 
 ###alex ssh #############################################################################################
 alias xsshmail="ssh -p 50022 alex@mail.bais.com.tw"
