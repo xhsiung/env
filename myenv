@@ -76,7 +76,7 @@ alias xopen="nautilus $1 &"
 
 
 #syn env ################################################################################################
-alias xenvsync="mypwd=`pwd`;cd ~;rm -rf env;
+alias xenvsync="mypwd=`pwd`;cd ~;rm -rf .env;
 		git clone https://github.com/xhsiung/env;
 		mv env ~/.env ; 
 		ln -s ~/.env/tmux.conf ~/.tmux.conf ;
