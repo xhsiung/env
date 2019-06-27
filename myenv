@@ -33,7 +33,7 @@ storecmd(){
 	echo "cmd: $1"
 	echo ""
 	history -r
-	#Ctrl + p --> paste
+	#Ctrl + p --> paste or up_key
 }
 
 #docker #################################################################################################
