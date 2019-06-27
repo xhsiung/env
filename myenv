@@ -28,9 +28,15 @@ git config --global user.name "alex"
 
 storecmd(){
 	#history -c
-	echo $1 >> ~/.bash_history
 	echo "##########################################################################################"
-	echo "cmd: $1"
+	if [ ! -z "$1" ]; then
+		echo $1 >> ~/.bash_history
+		echo "cmd: $1"
+	fi
+	if [ ! -z "$2" ];then
+		echo $2 >> ~/.bash_history
+		echo "cmd: $2"
+	fi
 	echo ""
 	history -r
 	#Ctrl + p --> paste or up_key
@@ -42,6 +48,7 @@ alias xdockRun="storecmd  'docker run -it --name \$1 ubuntu:16.04'"
 alias xdockImage="storecmd 'docker images'"
 alias xdockContainer="storecmd 'docker ps -a'"
 alias xdockContainerPs="storecmd 'docker ps -a'"
+alias xdockDeploy="storecmd 'docker swarm init' 'docker stack deploy -c docker-compose.yml \$1'"
 
 ###alex ssh #############################################################################################
 alias xsshmail="ssh -p 50022 alex@mail.bais.com.tw"
