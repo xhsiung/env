@@ -27,6 +27,19 @@ git config --global user.email "xhsiung@gmail.com"
 git config --global user.name "xhsiung"
 git config --global push.default current
 
+#syn env ################################################################################################
+alias xenvsync="mypwd=`pwd`;cd ~;rm -rf .env;
+		git clone https://github.com/xhsiung/env;
+		mv env ~/.env ; 
+		ln -sf ~/.env/tmux.conf ~/.tmux.conf ;
+		cd $mypwd"
+
+alias xenvpush="mypwd=`pwd`;cd ~/.env;
+		git add .;
+		git commit -m 'fix myenv';
+		git push origin;
+		cd $mypwd"
+
 storecmd(){
 	#history -c
 	echo "##########################################################################################"
@@ -73,19 +86,5 @@ alias xandroid-studio="/home/alex/android-studio/bin/studio.sh &"
 alias xscprsa="storecmd 'cat ~/.ssh/id_rsa.pub |ssh \$1 -p 22 \"cat >> ~/.ssh/authorized_keys\" '"
 alias xopen="nautilus $1 &"
 
-
-
-#syn env ################################################################################################
-alias xenvsync="mypwd=`pwd`;cd ~;rm -rf .env;
-		git clone https://github.com/xhsiung/env;
-		mv env ~/.env ; 
-		ln -sf ~/.env/tmux.conf ~/.tmux.conf ;
-		cd $mypwd"
-
-alias xenvpush="mypwd=`pwd`;cd ~/.env;
-		git add .;
-		git commit -m 'fix myenv';
-		git push origin;
-		cd $mypwd"
 #emulator ###############################################################################################
 tmux
