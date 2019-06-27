@@ -79,7 +79,7 @@ alias xopen="nautilus $1 &"
 alias xenvsync="mypwd=`pwd`;cd ~;rm -rf .env;
 		git clone https://github.com/xhsiung/env;
 		mv env ~/.env ; 
-		ln -s ~/.env/tmux.conf ~/.tmux.conf ;
+		ln -sf ~/.env/tmux.conf ~/.tmux.conf ;
 		cd $mypwd"
 
 alias xenvpush="mypwd=`pwd`;cd ~/.env;
