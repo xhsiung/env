@@ -23,8 +23,8 @@ if [ -f /home/alex/Android/Sdk ]; then
 	export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_NDK:$PATH
 fi
 
-git config --global user.email "alex@bais.com.tw"
-git config --global user.name "alex"
+git config --global user.email "xhsiung@gmail.com"
+git config --global user.name "xhsiung"
 
 storecmd(){
 	#history -c
