@@ -61,8 +61,12 @@ alias xdockBuild="storecmd 'docker build -t \$1 .'"
 alias xdockRun="storecmd  'docker run -it --name \$1 ubuntu:16.04'"
 alias xdockImage="storecmd 'docker images'"
 alias xdockPs="storecmd 'docker ps -a'"
+alias xdockNetwork="storecmd 'docker network ls'"
 
 alias xdockStackDeploy="storecmd 'docker swarm init' 'docker stack deploy -c docker-compose.yml \$1'"
+alias xdockCommit="storecmd 'docker ps -a' 'docker commit -m \$1 ContianerID  \$1/proj:1.0'"
+
+alias xdockcompoCC="storecmd 'cmd'"
 
 ###alex ssh #############################################################################################
 alias xsshmail="ssh -p 50022 alex@mail.bais.com.tw"
@@ -72,7 +76,7 @@ alias xsshChinaMedia="ssh alex@video.ebais.com.cn"
 alias xssh137="ssh alex@60.249.164.137"
 alias xsshwebbais="ssh root@www.bais.com.tw"
 
-alias xsshwechat1="ssh alex@192.168.35.61"
+alias xsshwech1="ssh alex@192.168.35.61"
 alias xsshwechat2="ssh alex@192.168.35.62"
 alias xsshmedia2="ssh alex@192.168.35.65 -p 50023"
 alias xsshline="ssh alex@192.168.35.61"
@@ -80,6 +84,7 @@ alias xsshNfRVNC="ssh -NfR 55900:localhost:5900 alex@axsoho.asuscomm.com -p 5902
 
 alias xsshOffice="ssh alex@localhost -p 50022"
 #app ####################################################################################################
+alias xtmuxatach="unset TMUX;storecmd 'tmux ls' 'tmux attach -t \$1'"
 alias xjupyter="cd ~/vcode/jupy/ ;/home/alex/anaconda3/bin/jupyter notebook --ip=172.16.39.139"
 alias xandroid-studio="/home/alex/android-studio/bin/studio.sh &"
 
