@@ -1,0 +1,72 @@
+#alex env ##############################################################################################
+if [ -f /etc/profile.d/node_env.sh ]; then
+	. /etc/profile.d/node_env.sh
+fi
+
+if [ -f /home/alex/Qt/5.12.1/gcc_64 ]; then
+	export QTDIR=/home/alex/Qt/5.12.1/gcc_64
+	export QTEDIR=$QTDIR
+	export PATH=$QTDIR/bin:$PATH
+	
+	export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
+	export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$QTDIR/lib/pkgconfig
+	export PATH=$QTDIR/bin:$PATH
+fi
+
+
+if [ -f /home/alex/Android/Sdk ]; then
+	#android SDK
+	export ANDROID_HOME=/home/alex/Android/Sdk
+	#anadroid NDK
+	export ANDROID_NDK_ROOT=$ANDROID_HOME/ndk-bundle
+	export ANDROID_NDK=$ANDROID_HOME/ndk-bundle
+	export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_NDK:$PATH
+fi
+
+git config --global user.email "xhsiung@gmail.com"
+git config --global user.name "xhsiung"
+git config --global push.default current
+
+#syn env ################################################################################################
+alias xenvsync="mypwd=`pwd`;cd ~;rm -rf .env;
+		git clone https://github.com/xhsiung/env;
+		mv env ~/.env ; 
+		ln -sf ~/.env/tmux.conf ~/.tmux.conf ;
+		cd $mypwd"
+
+alias xenvpush="mypwd=`pwd`;cd ~/.env;
+		git add .;
+		git commit -m 'fix myenv';
+		git push origin;
+		cd $mypwd"
+
+storecmd(){
+	#history -c
+	echo "##########################################################################################"
+	if [ ! -z "$1" ]; then
+		echo $1 >> ~/.bash_history
+		echo "cmd: $1"
+	fi
+	if [ ! -z "$2" ];then
+		echo $2 >> ~/.bash_history
+		echo "cmd: $2"
+	fi
+	echo ""
+	history -r
+	#Ctrl + p --> paste or up_key
+}
+
+
+if [ -f ~/.env/xdock ]; then
+	. ~/.env/xdock
+fi
+
+if [ -f ~/.env/xssh ]; then
+	. ~/.env/xssh
+fi
+
+if [ -f ~/.env/xother ]; then
+	. ~/.env/xother
+fi
+
+tmux

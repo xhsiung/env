@@ -1,0 +1,11 @@
+alias xdockBuild="storecmd 'docker build -t \$1 .'"
+alias xdockRun="storecmd  'docker run -it --name \$1 ubuntu:16.04'"
+alias xdockImage="storecmd 'docker images'"
+alias xdockPs="storecmd 'docker ps -a'"
+alias xdockNetwork="storecmd 'docker network ls'"
+
+alias xdockStackDeploy="storecmd 'docker swarm init' 'docker stack deploy -c docker-compose.yml \$1'"
+alias xdockCommit="storecmd 'docker ps -a' 'docker commit -m \$1 ContianerID  \$1/proj:1.0'"
+
+alias xdockcompoCC="storecmd 'cmd'"
+
