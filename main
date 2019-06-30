@@ -36,7 +36,7 @@ alias xenvsync="mypwd=`pwd`;cd ~;rm -rf .env;
 
 alias xenvpush="mypwd=`pwd`;cd ~/.env;
 		git add .;
-		git commit -m 'fix myenv';
+		git commit -m 'fix main';
 		git push origin;
 		cd $mypwd"
 
@@ -57,16 +57,10 @@ storecmd(){
 }
 
 
-if [ -f ~/.env/xdock ]; then
-	. ~/.env/xdock
-fi
-
-if [ -f ~/.env/xssh ]; then
-	. ~/.env/xssh
-fi
-
-if [ -f ~/.env/xother ]; then
-	. ~/.env/xother
+if [ -f ~/.env/sh/xssh ]; then
+	for s in `ls ~/.env/sh/*`;do
+		. $s
+	done
 fi
 
 tmux
