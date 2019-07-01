@@ -43,14 +43,10 @@ alias xenvpush="mypwd=`pwd`;cd ~/.env;
 storecmd(){
 	#history -c
 	echo "##########################################################################################"
-	if [ ! -z "$1" ]; then
-		echo $1 >> ~/.bash_history
-		echo "cmd: $1"
-	fi
-	if [ ! -z "$2" ];then
-		echo $2 >> ~/.bash_history
-		echo "cmd: $2"
-	fi
+	for s in "$@"; do
+		echo $s >> ~/.bash_history
+		echo "cmd: $s"
+	done
 	echo ""
 	history -r
 	#Ctrl + p --> paste or up_key

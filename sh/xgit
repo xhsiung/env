@@ -1,0 +1,8 @@
+alias xgitBranch="storecmd 'git branch'"
+alias xgitBranchNew="storecmd 'git checkout -b \$1'"
+
+alias xgitComm="storecmd 'git commit -m \"add main\"'"
+alias xgitCommBranch="storecmd 'git commit -a -m \"add main\"'"
+
+alias xgitCheckout="storecmd 'git checkout \$1'"
+alias xgitMerge="storecmd 'git merge \$1'"

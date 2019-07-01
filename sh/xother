@@ -1,8 +1,0 @@
-#app ####################################################################################################
-alias xtmuxatach="unset TMUX;storecmd 'tmux ls' 'tmux attach -t \$1'"
-alias xjupyter="cd ~/vcode/jupy/ ;/home/alex/anaconda3/bin/jupyter notebook --ip=172.16.39.139"
-alias xandroid-studio="/home/alex/android-studio/bin/studio.sh &"
-
-alias xscprsa="storecmd 'cat ~/.ssh/id_rsa.pub |ssh \$1 -p 22 \"cat >> ~/.ssh/authorized_keys\" '"
-alias xopen="nautilus $1 &"
-

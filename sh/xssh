@@ -13,3 +13,4 @@ alias xsshNfRVNC="ssh -NfR 55900:localhost:5900 alex@axsoho.asuscomm.com -p 5902
 
 alias xsshOffice="ssh alex@localhost -p 50022"
 
+alias xscprsa="storecmd 'cat ~/.ssh/id_rsa.pub |ssh \$1 -p 22 \"cat >> ~/.ssh/authorized_keys\" '"
