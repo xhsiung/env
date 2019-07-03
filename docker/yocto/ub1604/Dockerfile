@@ -17,12 +17,13 @@ ENV PROJECT=alex
 ARG host_uid=1001
 ARG host_gid=1001
 
-RUN adduser --disabled-password --gecos '' $USER_NAME
+RUN adduser --disabled-password --gecos '' $USER_NAME ;\
+     echo alex:alex | chpasswd
+
 RUN groupadd -g $host_gid $USER_NAME && \
      useradd -g $host_gid -m -s /bin/bash -u $host_uid $USER_NAME; \
      addgroup sudo; \
-     addgroup $USER_NAME sudo; \
-     echo alex:alex | chpasswd
+     addgroup $USER_NAME sudo
 
 USER alex
 ENV BUILD_HOME=/home/$USER_NAME
