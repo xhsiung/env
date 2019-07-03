@@ -59,4 +59,8 @@ if [ -f ~/.env/sh/xssh ]; then
 	done
 fi
 
-tmux
+#tmux new -s $USER
+#if [ $? -eq 1 ];then
+#	 tmux attach -t $USER
+#fi
+

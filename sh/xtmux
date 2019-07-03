@@ -1,0 +1,1 @@
+alias xtmux="tmux new -s $USER || tmux attach -t $USER"
