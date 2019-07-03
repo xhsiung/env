@@ -1,5 +1,5 @@
 alias xdockBuild="storecmd 'docker build -t \$1 .'"
-alias xdockRun="storecmd  'docker run -it -v $PWD/$USER:/home/$USER --name \$1 ImageID /bin/bash'"
+alias xdockRun="storecmd 'docker images' 'docker run -it -v $PWD/$USER:/home/$USER \$1_REPOSITORY /bin/bash'"
 alias xdockImage="storecmd 'docker images'"
 alias xdockPs="storecmd 'docker ps -a'"
 alias xdockNetwork="storecmd 'docker network ls'"
