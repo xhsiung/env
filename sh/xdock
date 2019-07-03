@@ -6,6 +6,3 @@ alias xdockNetwork="storecmd 'docker network ls'"
 
 alias xdockStackDeploy="storecmd 'docker swarm init' 'docker stack deploy -c docker-compose.yml \$1'"
 alias xdockCommit="storecmd 'docker ps -a' 'docker commit -m \$1 ContianerID  \$1/proj:1.0'"
-
-alias xdockcompoCC="storecmd 'cmd'"
-
