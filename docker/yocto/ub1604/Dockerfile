@@ -26,7 +26,6 @@ RUN groupadd -g $host_gid $USER_NAME && \
 
 USER alex
 ENV BUILD_HOME=/home/$USER_NAME
-RUN mkdir -p $BUILD_HOME
 
 WORKDIR $BUILD_HOME
 
