@@ -55,10 +55,10 @@ storecmd(){
 tmuxconf(){
 	v=`tmux -V`
 	if [ "$v" == "tmux 2.6" ];then
-		ln -sf ~/.env/tmux2.6.conf ~/tmux.conf
+		ln -sf ~/.env/tmux2.6.conf ~/.tmux.conf
 	fi
 	if [ "$v" == "tmux 1.8" ];then
-		ln -sf ~/.env/tmux1.8.conf ~/tmux.conf
+		ln -sf ~/.env/tmux1.8.conf ~/.tmux.conf
 	fi
 }
 
