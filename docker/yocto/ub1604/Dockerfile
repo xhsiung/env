@@ -17,7 +17,7 @@ ENV PROJECT=alex
 ARG host_uid=1001
 ARG host_gid=1001
 
-RUN adduser --disabled-password --gecos '' $USER_NAME ;\
+RUN adduser --disabled-password --home /home/$USER_NAME --gecos '' $USER_NAME ;\
      echo alex:alex | chpasswd
 
 RUN groupadd -g $host_gid $USER_NAME && \
