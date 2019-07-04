@@ -60,8 +60,10 @@ if [ -f ~/.env/sh/xssh ]; then
 fi
 
 
-#tmux new -s $USER
-#if [ $? -eq 1 ];then
-#	 tmux attach -t $USER
-#fi
+if [ "$SSH_CLINET" != "" ];then
+	tmux new -s $USER
+	if [ $? -eq 1 ];then
+		tmux attach -t $USER
+	fi
+fi
 
