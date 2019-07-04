@@ -28,9 +28,9 @@ git config --global user.name "xhsiung"
 git config --global push.default current
 
 #syn env ################################################################################################
-alias xenvsync="mypwd=`pwd`;cd ~;rm -rf .env;
-		git clone https://github.com/xhsiung/env;
-		mv env ~/.env ; 
+alias xenvsync="mypwd=`pwd`;
+		cd /tmp; git clone https://github.com/xhsiung/env &&
+		rm -rf ~/.env && mv env ~/.env &&
 		ln -sf ~/.env/tmux.conf ~/.tmux.conf ;
 		cd $mypwd"
 
