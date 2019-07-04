@@ -41,7 +41,7 @@ alias xenvpush="mypwd=`pwd`;cd ~/.env;
 		cd $mypwd"
 
 storecmd(){
-	#history -c
+	history -c
 	echo "##########################################################################################"
 	for s in "$@"; do
 		echo $s >> ~/.bash_history
@@ -58,6 +58,7 @@ if [ -f ~/.env/sh/xssh ]; then
 		. $s
 	done
 fi
+
 
 #tmux new -s $USER
 #if [ $? -eq 1 ];then
