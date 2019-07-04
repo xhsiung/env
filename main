@@ -60,7 +60,7 @@ if [ -f ~/.env/sh/xssh ]; then
 fi
 
 
-if [ "$SSH_CLINET" != "" ];then
+if [ "$SSH_CLIENT" != "" ];then
 	tmux new -s $USER
 	if [ $? -eq 1 ];then
 		tmux attach -t $USER
