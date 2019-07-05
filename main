@@ -52,7 +52,7 @@ storecmd(){
 	#Ctrl + p --> paste or up_key
 }
 
-if [ -f ~/.env/sh/xssh ]; then
+if [ -d ~/.env/sh ]; then
 	for s in `ls ~/.env/sh/*`;do
 		. $s
 	done
