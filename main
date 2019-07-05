@@ -31,7 +31,7 @@ git config --global push.default current
 alias xenvsync="mypwd=`pwd`;
 		cd /tmp; git clone https://github.com/xhsiung/env &&
 		rm -rf ~/.env && mv env ~/.env &&
-		tmuxconf;
+		ln -sf ~/.env/tmux.conf ~/.tmux.conf
 		cd $mypwd"
 
 alias xenvpush="mypwd=`pwd`;cd ~/.env;
@@ -52,22 +52,11 @@ storecmd(){
 	#Ctrl + p --> paste or up_key
 }
 
-tmuxconf(){
-	v=`tmux -V`
-	if [ "$v" == "tmux 2.6" ];then
-		ln -sf ~/.env/tmux2.6.conf ~/.tmux.conf
-	fi
-	if [ "$v" == "tmux 1.8" ];then
-		ln -sf ~/.env/tmux1.8.conf ~/.tmux.conf
-	fi
-}
-
 if [ -f ~/.env/sh/xssh ]; then
 	for s in `ls ~/.env/sh/*`;do
 		. $s
 	done
 fi
-
 
 if [ "$SSH_CLIENT" == "" ];then
 	tmux new -s $USER
