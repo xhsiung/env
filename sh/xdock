@@ -1,10 +1,14 @@
-alias xdockBuild="storecmd 'docker build -t \$1_mybuntu .'"
-alias xdockRun="storecmd 'docker images' 'docker run -it -v $PWD/$USER:/home/$USER \$1_REPOSITORY /bin/bash'"
-alias xdockImage="storecmd 'docker images'"
-alias xdockPs="storecmd 'docker ps -a'"
-alias xdockNetwork="storecmd 'docker network ls'"
+alias xdockBuild="storecmd 'cmd@docker build -t \$1_mybuntu .'"
+alias xdockRun="storecmd 'cmd@docker images' \
+			 'cmd@docker run -it -v $PWD/$USER:/home/$USER \$1_REPOSITORY /bin/bash'"
 
-alias xdockDelAllImgs="storecmd docker images -q | xargs docker rmi -f"
+alias xdockImage="storecmd 'cmd@docker images'"
+alias xdockPs="storecmd 'cmd@docker ps -a'"
+alias xdockNetwork="storecmd 'cmd@docker network ls'"
 
-alias xdockStackDeploy="storecmd 'docker swarm init' 'docker stack deploy -c docker-compose.yml \$1_my'"
-alias xdockCommit="storecmd 'docker ps -a' 'docker commit -m \$1_mypro ContianerID  \$1_mypro/proj:1.0'"
+alias xdockDelAllImgs="storecmd 'cmd@docker images -q | xargs docker rmi -f'"
+
+alias xdockStackDeploy="storecmd 'cmd@docker swarm init' \
+				 'cmd@docker stack deploy -c docker-compose.yml \$1_my'"
+alias xdockCommit="storecmd 'cmd@docker ps -a' \
+			    'cmd@docker commit -m \$1_mypro ContianerID  \$1_mypro/proj:1.0'"

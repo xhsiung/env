@@ -44,8 +44,10 @@ storecmd(){
 	history -c
 	echo "##########################################################################################"
 	for s in "$@"; do
-		echo $s >> ~/.bash_history
-		echo "cmd: $s"
+		doc=`echo "$s" | awk -F@ '{print $1}'`
+		cmd=`echo "$s" | awk -F@ '{print $2}'`
+		echo "$doc: $cmd"
+		echo $cmd >> ~/.bash_history
 	done
 	echo ""
 	history -r

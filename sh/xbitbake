@@ -1,5 +1,6 @@
-alias xbitbake="storecmd 'ls meta-rpi/images/*' 'bitbake \$1'"
+alias xbitbake="storecmd 'cmd@ls meta-rpi/images/*' \
+			 'cmd@bitbake \$1'"
 
-alias xbitCreateLayer="storecmd 'bitbake-layers create-layer \$1'"
-alias xbitAddLayer="storecmd 'bitbake-layers add-layer \$1'"
+alias xbitCreateLayer="storecmd 'cmd@bitbake-layers create-layer \$1'"
+alias xbitAddLayer="storecmd 'cmd@bitbake-layers add-layer \$1'"
 
