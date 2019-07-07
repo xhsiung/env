@@ -45,7 +45,7 @@ storecmd(){
 	echo "##########################################################################################"
 	for s in "$@"; do
 		doc=`echo "$s" | awk -F@ '{print $1}'`
-		cmd=`echo "$s" | awk -F@ '{print $2}'`
+		cmd=`echo "$s" | awk -F@ '{print $2$3$4$5$6$7$8$9}'`
 		echo "$doc: $cmd"
 		echo $cmd >> ~/.bash_history
 	done
