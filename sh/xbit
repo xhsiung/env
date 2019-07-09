@@ -1,7 +1,9 @@
 alias xbitBuildPackage="storecmd 'cmd@bitbake -s | grep \$1' \
 				  'cmd@bitbake \$1_Package' "
 
-alias xbitSeachPack="storecmd 'cmd@bitbake -s | grep \$1'"
+alias xbitBuildListTasks="storecmd 'cmd@bitbake -c listtasks \$1_recipeName'"
+alias xbitBuildClean="storecmd 'cmd@bitbake -c clean \$1_recipeName'"
+alias xbitBuild="storecmd 'cmd@bitbake -c build \$1_recipeName'"
+alias xbitTask="storecmd 'cmd@bitbake \$1_recipeName'"
 
-alias xbitTask="storecmd 'cmd@bitbake -c \$1_Task recipe-name'"
-alias xbitListTask="storecmd 'cmd@bitbake -c listtasks $1_recipeName'"
+alias xbitSeachPack="storecmd 'cmd@bitbake -s | grep \$1'"
