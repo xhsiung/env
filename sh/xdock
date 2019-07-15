@@ -12,3 +12,10 @@ alias xdockStackDeploy="storecmd 'cmd@docker swarm init' \
 				 'cmd@docker stack deploy -c docker-compose.yml \$1_my'"
 alias xdockCommit="storecmd 'cmd@docker ps -a' \
 			    'cmd@docker commit -m \$1_mypro ContianerID  \$1_mypro/proj:1.0'"
+
+
+alias xdockExportImport="storecmd 'cmd@docker ps -a' \
+				  'cmd@docker import \$1_ContainerID myimag.tar' \
+				  'cmd@docker export \$1_ContainerID > myimag.tar'"
+
+
