@@ -13,4 +13,4 @@ alias xsshdocker="ssh alex@192.168.35.65"
 alias xsshNfRVNC="ssh -NfR 55900:localhost:5900 alex@axsoho.asuscomm.com -p 59022"
 alias xsshOffice="ssh alex@localhost -p 50022"
 
-alias xscprsa="storecmd 'cat ~/.ssh/id_rsa.pub |ssh \$1_remoteip -p 22 \"cat >> ~/.ssh/authorized_keys\" '"
+alias xsshscprsa="storecmd 'cmd@cat ~/.ssh/id_rsa.pub |ssh \$1_remoteip -p 22 \"cat >> ~/.ssh/authorized_keys\"'"
