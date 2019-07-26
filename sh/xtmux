@@ -1,3 +1,2 @@
 alias xtmux="tmux new -s $USER"
-alias xtmuxAttach="storecmd 'cmd@tmux ls' \
-			    'cmd@tmux attach -t \$1' "
+alias xtmuxAtt="tmux attach -t $USER"
