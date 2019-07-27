@@ -8,6 +8,7 @@ alias xdockRun="storecmd 'cmd@docker images' \
 alias xdockImage="storecmd 'cmd@docker images'"
 alias xdockContainerPs="storecmd 'cmd@docker container ps -a'"
 alias xdockImagePs="storecmd 'cmd@docker images ps -a'"
+alias xdockVolume="storecmd 'run@docker volume ls'"
 alias xdockNetwork="storecmd 'cmd@docker network ls'"
 
 alias xdockDelAllImgs="storecmd 'cmd@docker images -q | xargs docker rmi -f'"
