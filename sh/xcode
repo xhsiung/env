@@ -1,0 +1,1 @@
+alias xcodeSnippetClone='cp -a ~/.config/Code/User/snippets ~/.env'
