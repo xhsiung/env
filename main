@@ -46,12 +46,12 @@ storecmd(){
 	history -c
 	echo "##########################################################################################"
 	for s in "$@"; do
-		doc=`echo "$s" | awk -F@ '{print $1}'`
+		action=`echo "$s" | awk -F@ '{print $1}'`
 		cmd=`echo "$s" | awk -F@ '{print $2$3$4$5$6$7$8$9}'`
-		echo "$doc: $cmd"
+		echo "$action: $cmd"
 		echo $cmd >> ~/.bash_history
 		
-		if [ "$doc" == "run" ];then
+		if [ "$action" == "run" ];then
 			bash -c "$cmd"
 		fi
 	done

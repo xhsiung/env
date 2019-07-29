@@ -1,9 +1,12 @@
 alias xdockBuild="storecmd 'cmd@docker build -t \$1_mybuntu .'"
 
-alias xdockRun="storecmd 'cmd@docker images' \
+alias xdockRun="storecmd 'run@docker images' \
 			 'cmd@docker run -d  -p 8088:80 --volumes-from \$1_myname  \$1_REPOSITORY' \
 			 'cmd@docker run -d  -p 8088:80 -v $PWD/$USER:/home/$USER \$1_REPOSITORY' \
 			 'cmd@docker run -it -p 8088:80 -v $PWD/$USER:/home/$USER \$1_REPOSITORY /bin/bash'"
+
+alias xdockExe="storecmd 'run@docker ps -a' \
+			 'cmd@docker exec -it \$1_ContainerID /bin/bash'"
 
 alias xdockImage="storecmd 'cmd@docker images'"
 alias xdockContainerPs="storecmd 'cmd@docker container ps -a'"
@@ -17,7 +20,7 @@ alias xdockStackDeploy="storecmd 'cmd@docker swarm init' \
 				 'cmd@docker stack deploy -c docker-compose.yml \$1_my'"
 
 alias xdockCommit="storecmd 'cmd@docker ps -a' \
-			    'cmd@docker commit -m \$1_mypro ContianerID  \$1_mypro/proj:1.0'"
+			    'cmd@docker commit -m \$1_mypro \$2_ContianerID  \$1_mypro:1.0'"
 
 
 alias xdockExportImport="storecmd 'cmd@docker ps -a' \
