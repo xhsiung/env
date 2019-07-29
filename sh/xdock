@@ -19,7 +19,7 @@ alias xdockStackDeploy="storecmd 'cmd@docker swarm init' \
 				 'cmd@docker stack deploy -c docker-compose.yml \$1_my'"
 
 
-alias xdockCommit="storecmd 'cmd@docker ps -a' \
+alias xdockCommit="storecmd 'run@docker ps -a' \
 			    'cmd@docker commit -m \$1_mypro \$2_ContianerID  \$1_mypro:1.0'"
 
 
