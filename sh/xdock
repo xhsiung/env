@@ -34,11 +34,13 @@ alias xdockComposeStart="storecmd 'cmd@docker-compose start  -f xxx.yml'"
 alias xdockComposeStop="storecmd  'cmd@docker-compose stop   -f xxx.yml'"
 
 
-alias xdockSwarmInit="storecmd  'cmd@docker swarm init --advertise-addr 192.168.1.123'"
+alias xdockSwarmInit="storecmd  'cmd@docker swarm init --advertise-addr xx.xx.xx.xx'"
 alias xdockSwarmQueryToken="storecmd  'run@docker swarm join-token -q worker'"
 
 alias xdockSwarmNode="storecmd  'run@docker node ls'"
 alias xdockSwarmNodeUpdate="storecmd  'run@docker node ls' \
 				      'cmd@docker node update \$1_ID --label-add mysql123=true'"
 
+alias xdockSwarmJoin="storecmd  'cmd@docker swarm join --token \$1_Token xx.xx.xx.xx:2377'"
 alias xdockSwarmDeploy="storecmd  'cmd@docker deploy --compose-file docker-compose.yml MY_STACK123'"
+
