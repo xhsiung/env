@@ -34,7 +34,8 @@ alias xenvsync="mypwd=`pwd`;
 		ln -sf ~/.env/tmux.conf ~/.tmux.conf;
 		mkdir -p ~/.config/Code/User &&
                 cp -a ~/.env/snippets ~/.config/Code/User/;
-		cd $mypwd"
+		cd $mypwd;
+		. ~/.env/main;"
 
 alias xenvpush="mypwd=`pwd`;cd ~/.env;
 		git add .;
