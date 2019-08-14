@@ -3,7 +3,7 @@ if [ -f /etc/profile.d/node_env.sh ]; then
 	. /etc/profile.d/node_env.sh
 fi
 
-if [ -f ~/Qt/5.12.1/gcc_64 ]; then
+if [ -d ~/Qt/5.12.1/gcc_64 ]; then
 	export QTDIR=~/Qt/5.12.1/gcc_64
 	export QTEDIR=$QTDIR
 	export PATH=$QTDIR/bin:$PATH
@@ -14,7 +14,7 @@ if [ -f ~/Qt/5.12.1/gcc_64 ]; then
 fi
 
 
-if [ -f ~/Android/Sdk ]; then
+if [ -d ~/Android/Sdk ]; then
 	#android SDK
 	export ANDROID_HOME=~/Android/Sdk
 	#anadroid NDK
