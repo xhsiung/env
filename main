@@ -23,6 +23,11 @@ if [ -d ~/Android/Sdk ]; then
 	export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_NDK:$PATH
 fi
 
+
+if [ -d ~/.sdkman ]; then
+	export PATH=~/.sdkman/bin/sdkman-init.sh:$PATH
+fi
+
 git config --global user.email "xhsiung@gmail.com"
 git config --global user.name "xhsiung"
 git config --global push.default current
