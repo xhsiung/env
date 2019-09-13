@@ -24,10 +24,8 @@ if [ -d ~/Android/Sdk ]; then
 fi
 
 
-if [ -d ~/.sdkman ]; then
-	export SDKMAN_DIR="/home/alex/.sdkman"
-	[[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
-fi
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 git config --global user.email "xhsiung@gmail.com"
 git config --global user.name "xhsiung"
