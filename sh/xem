@@ -1,0 +1,3 @@
+alias xemcc="storecmd 'cmd@erun --port 8888 --no_brwser index.html' \
+		      'cmd@em++ lib/main.c -O3 -s WASM=1 -s EXPORTED_FUNCTION=\"[]\" -s TOTAL_MEMORY=64MB -o js/main.js' \
+		      'cmd@emcc lib/main.c -O3 -s WASM=1 -s EXPORTED_FUNCTION=\"[]\" -s TOTAL_MEMORY=64MB -o js/main.js'"
