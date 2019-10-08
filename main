@@ -24,9 +24,9 @@ if [ -d ~/Android/Sdk ]; then
 fi
 
 
-#if [ -d ~/emsdk ]; then
-#	source ~/emsdk/emsdk_env.sh
-#fi
+if [ -d ~/emsdk ]; then
+	source ~/emsdk/emsdk_env.sh
+fi
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
