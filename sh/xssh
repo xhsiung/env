@@ -8,7 +8,7 @@ alias xsshwebbais="ssh root@www.bais.com.tw"
 alias xsshmedia="ssh -p 50023 alex@192.168.35.60"
 alias xsshline="ssh alex@192.168.35.61"
 alias xsshwechat2="ssh alex@192.168.35.62"
-alias xsshdocker="ssh alex@192.168.35.64"
+alias xsshdocker="ssh alex@192.168.35.63"
 alias xsshdiary="ssh alex@192.168.35.65"
 
 alias xsshNfRVNC="ssh -NfR 55900:localhost:5900 alex@axsoho.asuscomm.com -p 59022"
