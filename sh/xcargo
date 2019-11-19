@@ -1,2 +1,4 @@
-alias xcargo="storecmd 'cmd@cargo new project --lib' \
-		       'cmd@cargo new project --bin'"
+alias xcargo="storecmd 'cmd@npm init wasm-app www'   \
+		       'cmd@cargo new project --bin' \
+		       'cmd@cargo new project --lib' \
+		       'cmd@cargo generate --git https://github.com/rustwasm/wasm-pack-template'"

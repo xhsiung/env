@@ -24,9 +24,9 @@ if [ -d ~/Android/Sdk ]; then
 fi
 
 
-if [ -d ~/emsdk ]; then
-	source ~/emsdk/emsdk_env.sh
-fi
+#if [ -d ~/emsdk ]; then
+#	source ~/emsdk/emsdk_env.sh
+#fi
 
 if [ -d ~/.cargo/ ]; then
 	source ~/.cargo/env
