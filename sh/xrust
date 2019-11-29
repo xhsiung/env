@@ -1,0 +1,9 @@
+alias xrustup_target_add="storecmd 'cmd@rustup target list' \
+				   'cmd@rustup target add x86_64-pc-windows-gnu'"
+
+alias xrustup_default="storecmd 'cmd@rustup toolchain list' \
+				'cmd@rustup default stable' "
+
+alias xrust_dev="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh; \
+		 curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh; \
+		 curl https://get.wasmer.io -sSfL | sh;"
