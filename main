@@ -23,14 +23,8 @@ if [ -d ~/Android/Sdk ]; then
 	export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_NDK:$PATH
 fi
 
-
-#if [ -d ~/emsdk ]; then
-#	source ~/emsdk/emsdk_env.sh
-#fi
-
-if [ -d ~/.cargo/ ]; then
-	source ~/.cargo/env
-fi
+[[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+[[ -s "$HOME/.wasmer/wasmer.sh" ]] && source "$HOME/.wasmer/wasmer.sh"
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
