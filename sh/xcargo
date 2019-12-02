@@ -1,4 +1,4 @@
 alias xcargo="storecmd 'cmd@rustc --print target-list' \
-			'cmd@cargo new myporj --bin|lib' \
+			'cmd@cargo new mypro --bin|lib' \
 			'cmd@cargo build --target wasm32-unknown-unknown --release'"
 
