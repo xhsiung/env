@@ -1,4 +1,4 @@
-alias xcargo="storecmd 'cmd@npm init wasm-app www'   \
-		       'cmd@cargo new project --bin' \
-		       'cmd@cargo new project --lib' \
-		       'cmd@cargo generate --git https://github.com/rustwasm/wasm-pack-template'"
+alias xcargo="storecmd 'cmd@rustc --print target-list' \
+			'cmd@cargo new myporj --bin|lib' \
+			'cmd@cargo build --target wasm32-unknown-unknown --release'"
+
