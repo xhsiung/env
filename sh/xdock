@@ -7,13 +7,13 @@ alias xdockRun="storecmd 'run@docker images' \
 alias xdockExe="storecmd 'run@docker ps -a' \
 			 'cmd@docker exec -it \$1_ContainerID /bin/bash'"
 
-alias xdockImage="storecmd 'cmd@docker images'"
 alias xdockContainerPs="storecmd 'cmd@docker container ps -a'"
-alias xdockImagePs="storecmd 'cmd@docker images ps -a'"
 alias xdockVolume="storecmd 'run@docker volume ls'"
 alias xdockNetwork="storecmd 'cmd@docker network ls'"
 
-alias xdockDelAllImgs="storecmd 'cmd@docker images -q | xargs docker rmi -f'"
+alias xdockImage="storecmd 'cmd@docker images'"
+alias xdockImagePs="storecmd 'cmd@docker images ps -a'"
+alias xdockImageDelAll="storecmd 'cmd@docker images -q | xargs docker rmi -f'"
 
 alias xdockStackDeploy="storecmd 'cmd@docker swarm init' \
 				 'cmd@docker stack deploy -c docker-compose.yml \$1_my'"
@@ -22,17 +22,14 @@ alias xdockStackDeploy="storecmd 'cmd@docker swarm init' \
 alias xdockCommit="storecmd 'run@docker ps -a' \
 			    'cmd@docker commit -m \$1_mypro \$2_ContianerID  \$1_mypro:1.0'"
 
-
 alias xdockExportImport="storecmd 'cmd@docker ps -a' \
 				  'cmd@docker import \$1_ContainerID myimag.tar' \
 				  'cmd@docker export \$1_ContainerID > myimag.tar'"
-
 
 alias xdockComposeUp="storecmd    'cmd@docker-compose up  -d -f xxx.yml'"
 alias xdockComposeDown="storecmd  'cmd@docker-compose down   -f xxx.yml'"
 alias xdockComposeStart="storecmd 'cmd@docker-compose start  -f xxx.yml'"
 alias xdockComposeStop="storecmd  'cmd@docker-compose stop   -f xxx.yml'"
-
 
 alias xdockSwarmInit="storecmd  'cmd@docker swarm init --advertise-addr xx.xx.xx.xx'"
 alias xdockSwarmQueryToken="storecmd  'run@docker swarm join-token -q worker'"
