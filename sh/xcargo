@@ -1,5 +1,5 @@
 alias xcargo="storecmd  'cmd@rustc --print target-list'  \
 			'cmd@rustup target add wasm32-unknown-unknown' \
-			'cmd@cargo new mypro --bin|lib' \
+			'cmd@cargo new --bin|lib myproj' \
 			'cmd@cargo build --target wasm32-unknown-unknown --release'"
 
