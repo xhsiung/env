@@ -4,19 +4,18 @@ alias xcargo="storecmd  'cmd@rustc --print target-list'  \
 			'cmd@cargo build --target wasm32-unknown-unknown --release'"
 
 alias xcargowasm="cargo new mywasm;
-		  cd mywasm;
-		  cp -f ~/.env/xcargo/wasm/CargoWasmer.toml Cargo.toml;
-		  cp -f ~/.env/xcargo/wasm/main.rs src/main.rs;
-		  cp -f ~/.env/xcargo/wasm/build.sh .;
-                  cargo new --lib mylib; cd mylib;
-		  mkdir .cargo;
-		  echo '[build]' > .cargo/config;
-		  echo 'target =\"wasm32-unknown-unknown\"' >> .cargo/config;
-		  cp -f ~/.env/xcargo/wasm/CargoWarm.toml Cargo.toml;
-		  cp -f ~/.env/xcargo/wasm/lib.rs src/lib.rs;
-                  cd ..;
-		  "
-
+			cd mywasm;
+			cp -f ~/.env/xcargo/wasm/CargoWasmer.toml Cargo.toml;
+			cp -f ~/.env/xcargo/wasm/main.rs src/main.rs;
+			cp -f ~/.env/xcargo/wasm/build.sh .;
+			cargo new --lib mylib; cd mylib;
+			mkdir .cargo;
+			echo '[build]' > .cargo/config;
+			echo 'target =\"wasm32-unknown-unknown\"' >> .cargo/config;
+			cp -f ~/.env/xcargo/wasm/CargoWarm.toml Cargo.toml;
+			cp -f ~/.env/xcargo/wasm/lib.rs src/lib.rs;
+			cd ..;
+			"
 alias xcargowasm-pack="cargo new --lib mywasmpack;
 			cd mywasmpack;
 			cp -f ~/.env/xcargo/wasm-pack/Cargo.toml .;
@@ -24,4 +23,5 @@ alias xcargowasm-pack="cargo new --lib mywasmpack;
 		  	cp -f ~/.env/xcargo/wasm-pack/index.js .;
 		  	cp -f ~/.env/xcargo/wasm-pack/webpack.config.js .;
 		  	cp -f ~/.env/xcargo/wasm-pack/package.json .;
+		  	cp -f ~/.env/xcargo/wasm-pack/build.sh .;
 			"
