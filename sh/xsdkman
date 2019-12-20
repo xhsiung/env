@@ -1,0 +1,4 @@
+alias xsdkmain="storecmd 'cmd@sdk list' \
+		   	 'cmd@skd list java' \
+		   	 'cmd@skd install java 8.0.222.hs-adpt'"
+
