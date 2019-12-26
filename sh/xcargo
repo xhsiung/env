@@ -35,6 +35,7 @@ alias xcargowasm-pack="cargo new --lib mywasmpack;
 			cp -f ~/.env/xcargo/wasm-pack/Cargo.toml .;
 		  	cp -f ~/.env/xcargo/wasm-pack/lib.rs src/lib.rs;
 		  	cp -f ~/.env/xcargo/wasm-pack/index.js .;
+		  	cp -f ~/.env/xcargo/wasm-pack/index.html .;
 		  	cp -f ~/.env/xcargo/wasm-pack/webpack.config.js .;
 		  	cp -f ~/.env/xcargo/wasm-pack/package.json .;
 		  	cp -f ~/.env/xcargo/wasm-pack/build.sh .;
