@@ -30,10 +30,9 @@ alias xcargowasmtime="cargo new mywasmtime;
 			cd ..;
 		   "
 
-alias xcargowasm-pack="cargo new --lib mywasmpack;
+alias xcargowasm-pack="rm -rf mywasmpack;mkdir mywasmpack;
 			cd mywasmpack;
-			cp -f ~/.env/xcargo/wasm-pack/Cargo.toml .;
-		  	cp -f ~/.env/xcargo/wasm-pack/lib.rs src/lib.rs;
+			cp -a ~/.env/xcargo/wasm-pack/crate .;
 		  	cp -f ~/.env/xcargo/wasm-pack/index.js .;
 		  	cp -f ~/.env/xcargo/wasm-pack/index.html .;
 		  	cp -f ~/.env/xcargo/wasm-pack/webpack.config.js .;
