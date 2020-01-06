@@ -68,10 +68,11 @@ storecmd(){
 	#Ctrl + p --> paste or up_key
 }
 
-if [ -d ~/.env/sh ]; then
+if [ -d ~/.env ]; then
 	for s in `ls ~/.env/sh/*`;do
 		. $s
 	done
+	export PATH=$PATH:~/.env/bin
 fi
 
 if [ "$SSH_CLIENT" == "" ];then
