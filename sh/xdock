@@ -1,19 +1,23 @@
 alias xdockBuild="storecmd 'cmd@docker build -t \$1_mybuntu .'"
 
 alias xdockRun="storecmd 'run@docker images' \
-			 'cmd@docker run -it --rm \$1_REPOSITORY /bin/bash' \
-			 'cmd@docker run -it --rm -p 8088:80 -v /host:/container \$1_REPOSITORY /bin/bash'"
+			 'cmd@docker run -it --rm -p 8088:80 -v /home/alex/myalex:/home/alex \$1_REPOSITORY /bin/bash' \
+			 'cmd@docker run -it --rm -v /home/alex/myalex:/home/alex \$1_REPOSITORY /bin/bash'"
 
 alias xdockExe="storecmd 'run@docker ps -a' \
 			 'cmd@docker exec -it \$1_ContainerID /bin/bash'"
 
-alias xdockContainerPs="storecmd 'cmd@docker container ps -a'"
+
 alias xdockVolume="storecmd 'run@docker volume ls'"
 alias xdockNetwork="storecmd 'cmd@docker network ls'"
 
 alias xdockImage="storecmd 'cmd@docker images'"
 alias xdockImagePs="storecmd 'cmd@docker images ps -a'"
 alias xdockImageDelAll="storecmd 'cmd@docker images -q | xargs docker rmi -f'"
+
+alias xdockContainerPs="storecmd 'cmd@docker container ps -a'"
+alias xdockContainerDel="storecmd 'cmd@docker contianer rm \$1_contianer"
+
 
 alias xdockStackDeploy="storecmd 'cmd@docker swarm init' \
 				 'cmd@docker stack deploy -c docker-compose.yml \$1_my'"
@@ -26,10 +30,10 @@ alias xdockExportImport="storecmd 'cmd@docker ps -a' \
 				  'cmd@docker import \$1_ContainerID myimag.tar' \
 				  'cmd@docker export \$1_ContainerID > myimag.tar'"
 
-alias xdockComposeUp="storecmd    'cmd@docker-compose up  -d -f xxx.yml'"
-alias xdockComposeDown="storecmd  'cmd@docker-compose down   -f xxx.yml'"
-alias xdockComposeStart="storecmd 'cmd@docker-compose start  -f xxx.yml'"
-alias xdockComposeStop="storecmd  'cmd@docker-compose stop   -f xxx.yml'"
+alias xdockCompose="storecmd   'cmd@docker-compose up  -d -f xxx.yml' \
+			       'cmd@docker-compose down   -f xxx.yml' \
+			       'cmd@docker-compose stop   -f xxx.yml' \
+			       'cmd@docker-compose start  -f xxx.yml' "
 
 alias xdockSwarmInit="storecmd  'cmd@docker swarm init --advertise-addr xx.xx.xx.xx'"
 alias xdockSwarmQueryToken="storecmd  'run@docker swarm join-token -q worker'"

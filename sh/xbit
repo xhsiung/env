@@ -9,5 +9,5 @@ alias xbitTask="storecmd 'cmd@bitbake \$1_recipeName'"
 alias xbitSeachPack="storecmd 'cmd@bitbake -s | grep \$1'"
 alias xbitDownloadPack="storecmd 'cmd@bitbake \$1_image -c fetchall'"
 
-alias xbitBuildSDK="storecmd 'cmd@bitbak -s |grep image' \
+alias xbitBuildSDK="storecmd 'cmd@bitbake -s |grep image' \
 			     'cmd@bitbake \$1_rpi-basic-image.bb -c populate_sdk'"
