@@ -75,10 +75,10 @@ if [ -d ~/.env ]; then
 	export PATH=$PATH:~/.env/bin
 fi
 
-if [ "$SSH_CLIENT" == "" ];then
-	tmux new -s $USER
+#if [ "$SSH_CLIENT" == "" ];then
+#	tmux new -s $USER
 #	if [ $? -eq 1 ];then
 #		tmux attach -t $USER
 #	fi
-fi
+#fi
 

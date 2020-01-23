@@ -14,4 +14,4 @@ alias xsshNfRVNC="ssh -NfR 55900:localhost:5900 alex@axsoho.asuscomm.com -p 5902
 
 alias xsshscprsa="storecmd 'cmd@cat ~/.ssh/id_rsa.pub |ssh \$1_remoteip -p 22 \"cat >> ~/.ssh/authorized_keys\"'"
 
-
+alias xsshpi="ssh root@172.16.39.141"
