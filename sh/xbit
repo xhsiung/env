@@ -1,13 +1,13 @@
 alias xbitBuildPackage="storecmd 'cmd@bitbake -s | grep \$1' \
-				  'cmd@bitbake \$1_Package' "
+				  'cmd@bitbake \$Package' "
 
-alias xbitBuildListTasks="storecmd 'cmd@bitbake -c listtasks \$1_recipeName'"
-alias xbitBuildClean="storecmd 'cmd@bitbake \$1_recipeName -c clean'"
-alias xbitBuild="storecmd 'cmd@bitbake \$1_recipeName' -c build"
-alias xbitTask="storecmd 'cmd@bitbake \$1_recipeName'"
+alias xbitBuildListTasks="storecmd 'cmd@bitbake -c listtasks \$recipeName'"
+alias xbitBuildClean="storecmd 'cmd@bitbake \$recipeName -c clean'"
+alias xbitBuild="storecmd 'cmd@bitbake \$recipeName' -c build"
+alias xbitTask="storecmd 'cmd@bitbake \$recipeName'"
 
 alias xbitSeachPack="storecmd 'cmd@bitbake -s | grep \$1'"
 alias xbitDownloadPack="storecmd 'cmd@bitbake \$1_image -c fetchall'"
 
 alias xbitBuildSDK="storecmd 'cmd@bitbake -s |grep image' \
-			     'cmd@bitbake \$1_rpi-basic-image.bb -c populate_sdk'"
+			     'cmd@bitbake \$rpi-basic-image.bb -c populate_sdk'"

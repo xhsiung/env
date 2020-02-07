@@ -1,0 +1,5 @@
+alias xsystemctl="storecmd 'cmd@systemctl disable myssh.service' \
+			   'cmd@systemctl enable  myssh.service' \
+			   'cmd@systemctl stop  myssh' \
+			   'cmd@systemctl start myssh'"
+

@@ -1,17 +1,17 @@
 alias xgitBranch="storecmd 'cmd@git branch'"
-alias xgitBranchAdd="storecmd 'cmd@git branch \$1_addBranch'"
-alias xgitBranchDel="storecmd 'cmd@git branch -d \$1_delBranch'"
-alias xgitBranchNewCheckout="storecmd 'cmd@git checkout -b \$1'"
+alias xgitBranchAdd="storecmd 'cmd@git branch \$addBranch'"
+alias xgitBranchDel="storecmd 'cmd@git branch -d \$delBranch'"
+alias xgitBranchNewCheckout="storecmd 'cmd@git checkout -b \$branch'"
 
-alias xgitComm="storecmd 'cmd@git tag \$1_tag100' \
+alias xgitComm="storecmd 'cmd@git tag \$tag100' \
 			 'cmd@git commit -m \"add main\"'"
-alias xgitCommBranch="storecmd 'cmd@git tag \$1_tag100' \
+alias xgitCommBranch="storecmd 'cmd@git tag \$tag100' \
 			       'cmd@git commit -a -m \"add main\"'"
 
 alias xgitCheckoutSwitch="storecmd 'cmd@git branch' \
-				   'cmd@git checkout \$1_mybranch'"
-alias xgitCheckoutTag="storecmd 'cmd@git checkout tags/\$1_mytags'"
+				   'cmd@git checkout \$branch'"
+alias xgitCheckoutTag="storecmd 'cmd@git checkout tags/\$mytags'"
 alias xgitMerge="storecmd 'cmd@git branch' \
-			  'cmd@git checkout \$1_mybranch' \
-			  'cmd@git merge \$1_otherBranch'"
+			  'cmd@git checkout \$branch' \
+			  'cmd@git merge \$otherBranch'"
 

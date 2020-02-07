@@ -1,0 +1,5 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host  chtmedia
+    HostName 192.168.35.60
+    Port 22
+    User root
