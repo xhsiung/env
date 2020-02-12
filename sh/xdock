@@ -16,7 +16,10 @@ alias xdockImagePs="storecmd 'cmd@docker images ps -a'"
 alias xdockImageDelAll="storecmd 'cmd@docker images -q | xargs docker rmi -f'"
 
 alias xdockContainerPs="storecmd 'cmd@docker container ps -a'"
-alias xdockContainerDel="storecmd 'cmd@docker contianer rm \$contianer"
+alias xdockContainer="storecmd 'cmd@docker contianer rm \$contianer' \
+                               'cmd@docker contianer start \$contianer' \
+                               'cmd@docker contianer stop \$contianer' 
+                               "
 
 
 alias xdockStackDeploy="storecmd 'cmd@docker swarm init' \

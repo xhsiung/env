@@ -1,0 +1,3 @@
+alias xlosetup="storecmd 'cmd@sudo losetup -fP \$xxx.img' \
+                         'cmd@sudo losetup -d \$/dev/loop8' \
+                         'cmd@losetup -a'"

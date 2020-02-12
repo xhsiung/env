@@ -3,7 +3,7 @@ if [ -f /etc/profile.d/node_env.sh ]; then
 	. /etc/profile.d/node_env.sh
 fi
 
-if [ -d ~/Qt5.13.2/gcc_64 ]; then
+if [ -d ~/Qt5.13.2 ]; then
 	export QTDIR=~/Qt5.13.2/5.13.2/gcc_64
 	export QTEDIR=$QTDIR
 	export PATH=$QTDIR/bin:$PATH
