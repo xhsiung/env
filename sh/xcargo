@@ -28,6 +28,7 @@ alias xcargowasmtime="cargo new mywasmtime;
 			cp -f ~/.env/xcargo/wasmtime/lib.rs src/lib.rs;
 			cp -f ~/.env/xcargo/wasmtime/build2.sh build.sh;
 			cd ..;
+			echo 'create wasmtime project';
 		   "
 
 alias xcargowasm-pack="rm -rf mywasmpack;mkdir mywasmpack;
@@ -38,4 +39,5 @@ alias xcargowasm-pack="rm -rf mywasmpack;mkdir mywasmpack;
 		  	cp -f ~/.env/xcargo/wasm-pack/webpack.config.js .;
 		  	cp -f ~/.env/xcargo/wasm-pack/package.json .;
 		  	cp -f ~/.env/xcargo/wasm-pack/build.sh .;
+			echo 'create wasm-pack project';
 			"
