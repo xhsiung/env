@@ -33,11 +33,22 @@ alias xcargowasmtime="cargo new mywasmtime;
 
 alias xcargowasm-pack="rm -rf mywasmpack;mkdir mywasmpack;
 			cd mywasmpack;
-			cp -a ~/.env/xcargo/wasm-pack/crate .;
-		  	cp -f ~/.env/xcargo/wasm-pack/index.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/index.html .;
-		  	cp -f ~/.env/xcargo/wasm-pack/webpack.config.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/package.json .;
-		  	cp -f ~/.env/xcargo/wasm-pack/build.sh .;
+			cp -a ~/.env/xcargo/wasm-pack/tpl/crate .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl/index.js .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl/index.html .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl/webpack.config.js .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl/package.json .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl/build.sh .;
 			echo 'create wasm-pack project';
+			"
+
+alias xcargowasm-pack2="rm -rf mywasmpack;mkdir mywasmpack;
+			cd mywasmpack;
+			cp -a ~/.env/xcargo/wasm-pack/tpl2/crate .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/index.js .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/index.html .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/webpack.config.js .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/package.json .;
+		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/build.sh .;
+			echo 'create wasm-pack2 project';
 			"
