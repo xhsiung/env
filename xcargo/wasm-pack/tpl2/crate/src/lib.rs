@@ -1,13 +1,10 @@
 #[macro_use]
 extern crate serde_derive;
+extern crate web_sys;
 
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
 use std::collections::HashMap;
-
-macro_rules! console_log {
-    ($($t:tt)*) => (log(&format_args!($($t)*).to_string()))
-}
 
 #[derive(Serialize,Deserialize,Debug)]
 pub struct Example{
@@ -44,7 +41,8 @@ pub fn fromjs() -> JsValue {
         field2: vec![ 1.0, 2.0 ],
         field3: [1., 2., 3., 4.]
     };
-
+    
+    web_sys::console::log_2(&"test".into(),&"test2".into());
     JsValue::from_serde(&example).unwrap()
 }
 

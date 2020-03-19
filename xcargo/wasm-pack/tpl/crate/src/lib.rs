@@ -1,15 +1,8 @@
+#[macro_use]
+extern crate web_sys;
+
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
-
-macro_rules! console_log {
-    ($($t:tt)*) => (log(&format_args!($($t)*).to_string()))
-}
-
-#[wasm_bindgen]
-extern "C" {
-    #[wasm_bindgen(js_namespace = console)]
-    fn log(s: &str);
-}
 
 #[wasm_bindgen(module = "/js/foo.js")]
 extern "C" {
@@ -18,5 +11,5 @@ extern "C" {
 
 #[wasm_bindgen(start)]
 pub fn run() {
-    console_log!("add:{}", add(1,2));
+    web_sys::console::log_2(&"add:".into(),&add(1,2).into());
 }
