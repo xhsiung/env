@@ -23,8 +23,6 @@ module.exports = {
           TextEncoder: ['text-encoding', 'TextEncoder']
         })
     ],
-    devServer: {
-	clientLogLevel: 'debug'
-    },
-    mode: 'development'
+    mode: 'development',
+    //mode: 'production'
 };

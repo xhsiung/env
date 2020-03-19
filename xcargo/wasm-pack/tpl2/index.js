@@ -1,16 +1,14 @@
 const rust = import('./crate/pkg');   //可以不用指定專案名
-
 rust
   .then(m => {
-	  let example = m.fromjs();
-	  //console.log(example);
-	  example.field1["mobile"]="0938";
-	  example.field2.push(123);
-          let my = m.myclass();
-          let conf = m.tojs(my ,example );
+	  //pub struct Conf( HashMap<String,String> );
+	  //key,val all are string
+	  let conf =  {"ip":"192.168.1.11","port":"123"}
+	  let myclass = m.MMyClass.new( conf );
 
-	  console.log("-->getConf");
-	  console.log( conf );
+	  myclass.set_conf( {"ip":"1.1.1.1","port":"444"} );
+
+	  let myconf = myclass.get_conf();
+	  console.log( myconf );
   })
   .catch(console.error);
-

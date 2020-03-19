@@ -24,6 +24,26 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration name="Test tests::mytest" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package mylib --lib tests::mytest -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo Command.Test tests::mytest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
     <option name="version" value="2" />
@@ -54,9 +74,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="672" y="286" width="624" height="532" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584522275930">
+    <state x="447" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583893724304">
       <screen x="59" y="27" width="1861" height="1053" />
     </state>
-    <state x="672" y="286" width="624" height="532" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/59.27.1861.1053@59.27.1861.1053" timestamp="1584522275930" />
+    <state x="447" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/59.27.1861.1053@59.27.1861.1053" timestamp="1583893724304" />
+    <state width="1811" height="277" key="GridCell.Tab.0.bottom" timestamp="1583894379542">
+      <screen x="59" y="27" width="1861" height="1053" />
+    </state>
+    <state width="1811" height="277" key="GridCell.Tab.0.bottom/59.27.1861.1053@59.27.1861.1053" timestamp="1583894379542" />
+    <state width="1811" height="277" key="GridCell.Tab.0.center" timestamp="1583894379542">
+      <screen x="59" y="27" width="1861" height="1053" />
+    </state>
+    <state width="1811" height="277" key="GridCell.Tab.0.center/59.27.1861.1053@59.27.1861.1053" timestamp="1583894379542" />
+    <state width="1811" height="277" key="GridCell.Tab.0.left" timestamp="1583894379541">
+      <screen x="59" y="27" width="1861" height="1053" />
+    </state>
+    <state width="1811" height="277" key="GridCell.Tab.0.left/59.27.1861.1053@59.27.1861.1053" timestamp="1583894379541" />
+    <state width="1811" height="277" key="GridCell.Tab.0.right" timestamp="1583894379542">
+      <screen x="59" y="27" width="1861" height="1053" />
+    </state>
+    <state width="1811" height="277" key="GridCell.Tab.0.right/59.27.1861.1053@59.27.1861.1053" timestamp="1583894379542" />
   </component>
 </project>

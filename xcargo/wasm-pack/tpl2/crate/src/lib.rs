@@ -6,13 +6,6 @@ use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
 use std::collections::HashMap;
 
-#[derive(Serialize,Deserialize,Debug)]
-pub struct Example{
-    pub field1: HashMap<String, String>,
-    pub field2: Vec<f32>,
-    pub field3: [f32;4],
-}
-
 #[wasm_bindgen(module="/js/myclass.js")]
 extern "C"{
     pub type MyClass;
@@ -21,41 +14,46 @@ extern "C"{
     fn new()->MyClass;
 
     #[wasm_bindgen(method)]
-    fn setConf(this:&MyClass, val:&JsValue );
+    fn set_conf(this:&MyClass, val:&JsValue );
 
     #[wasm_bindgen(method)]
-    fn getConf(this:&MyClass)->JsValue;
-
-    #[wasm_bindgen(method)]
-    fn showConf(this:&MyClass);
+    fn get_conf(this:&MyClass)->JsValue;
 }
 
 
-#[wasm_bindgen]
-pub fn fromjs() -> JsValue {
-    let mut field1 = HashMap::new();
-    field1.insert(String::from("name") , String::from("alex"));
+//模擬{"ip":"xxx"} obj
+#[derive(Serialize,Deserialize,Debug)]
+pub struct Conf( HashMap<String,String> );
 
-    let example = Example{
-        field1,
-        field2: vec![ 1.0, 2.0 ],
-        field3: [1., 2., 3., 4.]
-    };
-    
-    web_sys::console::log_2(&"test".into(),&"test2".into());
-    JsValue::from_serde(&example).unwrap()
+
+#[wasm_bindgen]
+pub struct MMyClass{
+    myclass: MyClass
 }
 
 #[wasm_bindgen]
-pub fn myclass(val:&JsValue) -> MyClass {
-    MyClass::new()
-}
+impl MMyClass{
+    pub fn new(jsval:JsValue) -> MMyClass{
+        let my = MyClass::new();
+        my.set_conf( &jsval );
+        MMyClass{
+            myclass: my
+        }
+    }
 
-#[wasm_bindgen]
-pub fn tojs(my:&MyClass ,val:&JsValue) ->JsValue {
-    //let example:Example = val.into_serde().unwrap();
-    //let my = MyClass::new();
-    my.setConf( val );
-    my.showConf();
-    my.getConf()
+    pub fn set_conf(&self,jsval: &JsValue ){
+        let conf: Conf  = jsval.into_serde().unwrap();
+
+        let ip = conf.0.get("ip").into();
+        let port = conf.0.get("port").into();
+
+        //debug
+        web_sys::console::log_1(&ip);
+        web_sys::console::log_1(&port);
+        self.myclass.set_conf( jsval );
+    }
+
+    pub fn get_conf(&self) -> JsValue {
+        self.myclass.get_conf()
+    }
 }
