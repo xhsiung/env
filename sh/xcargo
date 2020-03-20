@@ -71,3 +71,9 @@ alias xcargowasm-nodejs="rm -rf mywasmpack;mkdir mywasmpack;
 			cp -a ~/.env/xcargo/wasm-pack/notpl/* .;
 			echo 'create wasm-nodejs project';
 			"
+
+alias xcargowasm-nodejs2="rm -rf mywasmpack;mkdir mywasmpack;
+			cd mywasmpack;
+			cp -a ~/.env/xcargo/wasm-pack/notpl2/* .;
+			echo 'create wasm-nodejs2 project';
+			"
