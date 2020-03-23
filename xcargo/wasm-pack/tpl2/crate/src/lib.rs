@@ -1,6 +1,5 @@
 #[macro_use]
 extern crate serde_derive;
-extern crate web_sys;
 
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
@@ -56,4 +55,22 @@ impl MMyClass{
     pub fn get_conf(&self) -> JsValue {
         self.myclass.get_conf()
     }
+
+    pub fn send_json(&self) {
+        #[derive(Serialize,Deserialize,Debug)]
+        pub struct Data( HashMap<String,String> );
+
+        let window = web_sys::window().unwrap();
+        //let event =  web_sys::CustomEvent
+        let mut customeventinit = web_sys::CustomEventInit::new();
+        let mut jobj = HashMap::new();
+        jobj.insert("name".to_string(),"alex".to_string());
+        jobj.insert("mobile".to_string(),"0938".to_string());
+        let obj = JsValue::from_serde( Data( jobj ) ).unwrap() ;
+        customeventinit.detail(&obj);
+
+        let custom = web_sys::CustomEvent::new_with_event_init_dict("event", &customeventinit);
+        window.dispatch_event(&custom.unwrap()).unwrap();
+    }
 }
+

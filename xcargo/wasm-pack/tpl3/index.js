@@ -1,5 +1,8 @@
-const rust = import('./crate/pkg');   //可以不用指定專案名
+window.addEventListener('event', function(data){
+	    console.log(data.detail);
+});
 
+const rust = import('./crate/pkg');   //可以不用指定專案名
 rust
   .then(m => {
 	  let example = m.fromjs();
@@ -11,6 +14,7 @@ rust
 
 	  console.log("-->getConf");
 	  console.log( conf );
+	  m.send_json();
   })
   .catch(console.error);
 
