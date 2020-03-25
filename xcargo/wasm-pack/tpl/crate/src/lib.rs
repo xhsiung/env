@@ -58,3 +58,14 @@ pub fn run() {
     event_listener();
     web_sys::console::log_2(&"add:".into(),&add(1,2).into());
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_myfun() {
+        //assert_eq!( myadd(1,2), 1);
+    }
+}
