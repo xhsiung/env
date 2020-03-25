@@ -13,10 +13,32 @@ extern "C" {
 #[wasm_bindgen(start)]
 pub fn run() {
     send_json();
+    event_listener();
     web_sys::console::log_2(&"add:".into(),&add(1,2).into());
 }
 
 
+//window.addEventListener("wasmEvent",{})
+pub fn event_listener(){
+    let window = web_sys::window().unwrap();
+    let cb = Closure::wrap(Box::new(move |jobj:web_sys::CustomEvent| {
+        #[derive(Serialize,Deserialize)]
+        pub struct mData( HashMap<String,String> );
+
+        let detail = jobj.detail();
+        let obj:mData = detail.into_serde().unwrap();
+        web_sys::console::log_1(&obj.0.get("name").into());
+    }) as Box<dyn FnMut(web_sys::CustomEvent)>);
+
+    let mut eventListener = web_sys::EventListener::new();
+
+    //convert js::Function()
+    eventListener.handle_event( &cb.as_ref().unchecked_ref() );
+    window.add_event_listener_with_event_listener( "wasmEvent" , &eventListener);
+    cb.forget();
+}
+
+//window.dispatchEvent("evnet",customEvent);
 #[wasm_bindgen]
 pub fn send_json() {
     #[derive(Serialize,Deserialize,Debug)]

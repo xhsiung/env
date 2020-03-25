@@ -27,6 +27,7 @@ features = [
   'Window',
   'CustomEventInit',
   'CustomEvent',
-  'Event'
+  'Event',
+  'EventListener'
 ]
 

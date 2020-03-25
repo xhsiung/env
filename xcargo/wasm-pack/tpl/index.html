@@ -1,7 +1,13 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
+	<script>
+	function wasmEvent(){
+                        window.dispatchEvent(new CustomEvent("wasmEvent",{detail:{"name":"hello wolrd"} } ));
+        }
+	</script>
 </head>
 <body>
+	<button onclick="wasmEvent()">Click me</button>
 </body>
 </html>
