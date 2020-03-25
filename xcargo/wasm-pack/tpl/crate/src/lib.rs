@@ -24,11 +24,11 @@ pub fn event_listener(){
         web_sys::console::log_1(&name);
     }) as Box<dyn FnMut(web_sys::CustomEvent)>);
 
-    let mut eventListener = web_sys::EventListener::new();
+    let mut event_listener = web_sys::EventListener::new();
 
     //convert js::Function()
-    eventListener.handle_event( &cb.as_ref().unchecked_ref() );
-    window.add_event_listener_with_event_listener( "wasmEvent" , &eventListener);
+    event_listener.handle_event( &cb.as_ref().unchecked_ref() );
+    window.add_event_listener_with_event_listener( "wasmEvent" , &event_listener);
     cb.forget();
 }
 
