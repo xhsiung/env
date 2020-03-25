@@ -3,20 +3,7 @@ alias xcargo="storecmd  'cmd@rustc --print target-list'  \
 			'cmd@cargo new --bin|lib myproj' \
 			'cmd@cargo build --target wasm32-unknown-unknown --release'"
 
-#alias xcargowasmer="cargo new mywasmer;
-#			cd mywasmer;
-#			cp -f ~/.env/xcargo/wasmer/CargoWasmer.toml Cargo.toml;
-#			cp -f ~/.env/xcargo/wasmer/main.rs src/main.rs;
-#			cp -f ~/.env/xcargo/wasmer/lib.rs src/lib.rs;
-#			cp -f ~/.env/xcargo/wasmer/build.sh .;
-#			cargo new --lib mylib;cd mylib;
-#			mkdir .cargo;
-#			echo '[build]' > .cargo/config;
-#			echo 'target =\"wasm32-unknown-unknown\"' >> .cargo/config;
-#			cp -f ~/.env/xcargo/wasmer/CargoWasm.toml Cargo.toml;
-#			cp -f ~/.env/xcargo/wasmer/lib.rs src/lib.rs;
-#			cd ..;
-#			"
+alias xcargoTest="storecmd 'run@cargo test -- --nocapture'"
 
 alias xcargowasmtime="cargo new mywasmtime;
 			cd mywasmtime;
