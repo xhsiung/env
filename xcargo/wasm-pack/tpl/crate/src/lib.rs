@@ -19,7 +19,9 @@ pub fn event_listener(){
 
         let detail = jobj.detail();
         let obj:mData = detail.into_serde().unwrap();
-        web_sys::console::log_1(&obj.0.get("name").into());
+        //get_val 
+        let name = obj.0.get("name").into();
+        web_sys::console::log_1(&name);
     }) as Box<dyn FnMut(web_sys::CustomEvent)>);
 
     let mut eventListener = web_sys::EventListener::new();
