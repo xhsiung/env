@@ -10,14 +10,6 @@ extern "C" {
     fn add(a: u32, b: u32) -> u32;
 }
 
-#[wasm_bindgen(start)]
-pub fn run() {
-    send_json();
-    event_listener();
-    web_sys::console::log_2(&"add:".into(),&add(1,2).into());
-}
-
-
 //window.addEventListener("wasmEvent",{})
 pub fn event_listener(){
     let window = web_sys::window().unwrap();
@@ -55,4 +47,12 @@ pub fn send_json() {
 
     let custom = web_sys::CustomEvent::new_with_event_init_dict("event", &customeventinit);
     window.dispatch_event(&custom.unwrap()).unwrap();
+}
+
+
+#[wasm_bindgen(start)]
+pub fn run() {
+    send_json();
+    event_listener();
+    web_sys::console::log_2(&"add:".into(),&add(1,2).into());
 }
