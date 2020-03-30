@@ -47,8 +47,8 @@ pub fn send_json() {
     let obj = JsValue::from_serde( &Data( jobj ) ).unwrap() ;
     customeventinit.detail(&obj);
 
-    let custom = web_sys::CustomEvent::new_with_event_init_dict("event", &customeventinit);
-    window.dispatch_event(&custom.unwrap()).unwrap();
+    let customevent = web_sys::CustomEvent::new_with_event_init_dict("event", &customeventinit);
+    window.dispatch_event(&customevent.unwrap()).unwrap();
 }
 
 
@@ -65,7 +65,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_myfun() {
+    fn test_myadd() {
         //assert_eq!( myadd(1,2), 1);
     }
 }
