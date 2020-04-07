@@ -1,5 +1,4 @@
-#[macro_use]
-extern crate serde_derive;
+#[macro_use] extern crate serde_derive;
 
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;

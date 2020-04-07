@@ -53,6 +53,10 @@ alias xcargowasm-pack3="rm -rf mywasmpack;mkdir mywasmpack;
 			echo 'create wasm-pack3 project';
 			"
 
+alias xcargoproj="rm -rf myproj;mkdir myproj;
+		  cd myproj;
+		  cp -a ~/.env/xcargo/proj/* .;"
+
 alias xcargowasm-nodejs="rm -rf mywasmpack;mkdir mywasmpack;
 			cd mywasmpack;
 			cp -a ~/.env/xcargo/wasm-pack/notpl/* .;
