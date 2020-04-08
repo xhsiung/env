@@ -5,8 +5,7 @@ alias xcargo="storecmd  'cmd@rustc --print target-list'  \
 
 alias xcargoTest="storecmd 'run@cargo test -- --nocapture'"
 
-alias xcargowasmtime="cargo new mywasmtime;
-			cd mywasmtime;
+alias xcargowasmtime="cargo new mywasmtime; cd mywasmtime;
 			cp -f ~/.env/xcargo/wasmtime/CargoWasm.toml Cargo.toml;
 			cp -f ~/.env/xcargo/wasmtime/main.rs src/main.rs;
 			cp -f ~/.env/xcargo/wasmtime/build.sh .;
@@ -18,8 +17,7 @@ alias xcargowasmtime="cargo new mywasmtime;
 			echo 'create wasmtime project';
 		   "
 
-alias xcargowasm-pack="rm -rf mywasmpack;mkdir mywasmpack;
-			cd mywasmpack;
+alias xcargowasm-pack="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
 			cp -a ~/.env/xcargo/wasm-pack/tpl/crate .;
 			cp ~/.env/xcargo/wasm-pack/tpl2/crate/index.js .;
 		  	cp -f ~/.env/xcargo/wasm-pack/tpl/index.js .;
@@ -30,8 +28,7 @@ alias xcargowasm-pack="rm -rf mywasmpack;mkdir mywasmpack;
 			echo 'create wasm-pack project';
 			"
 
-alias xcargowasm-pack2="rm -rf mywasmpack;mkdir mywasmpack;
-			cd mywasmpack;
+alias xcargowasm-pack2="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
 			cp -a ~/.env/xcargo/wasm-pack/tpl2/crate .;
 			cp ~/.env/xcargo/wasm-pack/tpl2/crate/index.js .;
 		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/index.js .;
@@ -41,8 +38,7 @@ alias xcargowasm-pack2="rm -rf mywasmpack;mkdir mywasmpack;
 		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/build.sh .;
 			echo 'create wasm-pack2 project';
 			"
-alias xcargowasm-pack3="rm -rf mywasmpack;mkdir mywasmpack;
-			cd mywasmpack;
+alias xcargowasm-pack3="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
 			cp -a ~/.env/xcargo/wasm-pack/tpl3/crate .;
 			cp ~/.env/xcargo/wasm-pack/tpl3/crate/index.js .;
 		  	cp -f ~/.env/xcargo/wasm-pack/tpl3/index.js .;
@@ -53,18 +49,15 @@ alias xcargowasm-pack3="rm -rf mywasmpack;mkdir mywasmpack;
 			echo 'create wasm-pack3 project';
 			"
 
-alias xcargoproj="rm -rf myproj;mkdir myproj;
-		  cd myproj;
+alias xcargoproj="rm -rf myproj; mkdir myproj;cd myproj;
 		  cp -a ~/.env/xcargo/proj/* .;"
 
-alias xcargowasm-nodejs="rm -rf mywasmpack;mkdir mywasmpack;
-			cd mywasmpack;
+alias xcargowasm-nodejs="rm -rf mynodejs; mkdir mynodejs; cd mynodejs;
 			cp -a ~/.env/xcargo/wasm-pack/notpl/* .;
 			echo 'create wasm-nodejs project';
 			"
 
-alias xcargowasm-nodejs2="rm -rf mywasmpack;mkdir mywasmpack;
-			cd mywasmpack;
+alias xcargowasm-nodejs2="rm -rf mynodejs; mkdir mynodejs;cd mynodejs;
 			cp -a ~/.env/xcargo/wasm-pack/notpl2/* .;
 			echo 'create wasm-nodejs2 project';
 			"
