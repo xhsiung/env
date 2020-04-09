@@ -3,6 +3,7 @@ alias xrustup=""
 alias xrustup_target_add="storecmd 'cmd@rustup target list' \
 				   'cmd@rustup target add x86_64-pc-windows-gnu'"
 
-alias xrustup_default="storecmd 'cmd@rustup toolchain list' \
+alias xrustup_default="storecmd 'cmd@rustup target list |grep install' \
+				'cmd@rustup toolchain list' \
 				'cmd@rustup default stable' "
 

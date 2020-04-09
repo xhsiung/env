@@ -5,7 +5,7 @@ alias xcargo="storecmd  'cmd@rustc --print target-list'  \
 
 alias xcargoTest="storecmd 'run@cargo test -- --nocapture'"
 
-alias xcargowasmtime="cargo new mywasmtime; cd mywasmtime;
+alias xcargowasm-wasmtime="cargo new mywasmtime; cd mywasmtime;
 			cp -f ~/.env/xcargo/wasmtime/CargoWasm.toml Cargo.toml;
 			cp -f ~/.env/xcargo/wasmtime/main.rs src/main.rs;
 			cp -f ~/.env/xcargo/wasmtime/build.sh .;
@@ -60,4 +60,9 @@ alias xcargowasm-nodejs="rm -rf mynodejs; mkdir mynodejs; cd mynodejs;
 alias xcargowasm-nodejs2="rm -rf mynodejs; mkdir mynodejs;cd mynodejs;
 			cp -a ~/.env/xcargo/wasm-pack/notpl2/* .;
 			echo 'create wasm-nodejs2 project';
+			"
+
+alias xcargowasm-wasmer="rm -rf mywasmer;mkdir mywasmer;cd mywasmer;
+			cp -a ~/.env/xcargo/wasmer/* .;
+			echo 'create wasmer project';
 			"

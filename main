@@ -25,7 +25,6 @@ fi
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 [[ -s "$HOME/.wasmer/wasmer.sh" ]] && source "$HOME/.wasmer/wasmer.sh"
-[[ -s "$HOME/.wasmtime" ]] && export WASMTIME_HOME="$HOME/.wasmtime" && export PATH="$WASMTIME_HOME/bin:$PATH"
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
