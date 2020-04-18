@@ -57,4 +57,18 @@ pub fn run() {
     myjson();
     mylistener();
     //web_sys::console::log_2(&"add:".into(),&add(1,2).into());
+    
+    //call JS
+    let var1 = "test1";
+    //format!,變數   --> {}
+    //format!,escape--> {{}}
+    js_sys::eval(format!(r#"
+        console.log('{name}');
+        window.addEventListener("wasmEvent",(data)=>{{
+            console.log("js_sys");
+            console.log(data);
+        }})
+    "#,name=var1)
+    .as_str());
+    
 }
