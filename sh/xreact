@@ -1,0 +1,1 @@
+alias xreact="storecmd 'cmd@npx create-react-app myapp'"
