@@ -1,9 +1,10 @@
 import React from 'react';
+import Button from './Button.js'
 
 function App() {
 	return (
 		<div >
-			Learn React123
+			<Button></Button>
 		</div>
 	);
 }

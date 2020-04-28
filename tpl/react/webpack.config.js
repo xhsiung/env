@@ -8,13 +8,12 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, 'build'),
 		filename: 'app.bundle.js',
-		//publicPath: '/build/'
 	},
 	module: {
 		rules: [
 			{
 				test: /\.m?js$/,
-				exclude: /(node_modules|bower_components)/,
+				exclude: /(node_modules)/,
 				use: {
 					loader: 'babel-loader',
 					options: {
