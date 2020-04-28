@@ -7,7 +7,7 @@ module.exports = {
 	entry:  './src/index.js',
 	output: {
 		path: path.join(__dirname, 'build'),
-		filename: 'app.bundle.js',
+		filename: 'bundle.js',
 	},
 	module: {
 		rules: [
@@ -24,11 +24,14 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new HtmlWebPackPlugin({
+	      new HtmlWebPackPlugin({
 			template: './src/index.html'
-		      })
+	      })
 	],
 	optimization: {
 		minimizer: [new UglifyJsPlugin()],
 	},
+	devServer: {
+		port: 9000
+	}
 }
