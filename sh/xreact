@@ -1,1 +1,6 @@
-alias xreact="storecmd 'cmd@npx create-react-app myapp'"
+alias xreact="rm -rf myreact; mkdir myreact;cd myreact;
+			cp -a ~/.env/tpl/react/* .;
+			echo 'create xreact project';
+			"
+
+

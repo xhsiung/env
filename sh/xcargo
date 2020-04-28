@@ -6,63 +6,63 @@ alias xcargo="storecmd  'cmd@rustc --print target-list'  \
 alias xcargoTest="storecmd 'run@cargo test -- --nocapture'"
 
 alias xcargowasm-wasmtime="cargo new mywasmtime; cd mywasmtime;
-			cp -f ~/.env/xcargo/wasmtime/CargoWasm.toml Cargo.toml;
-			cp -f ~/.env/xcargo/wasmtime/main.rs src/main.rs;
-			cp -f ~/.env/xcargo/wasmtime/build.sh .;
+			cp -f ~/.env/tpl/wasmtime/CargoWasm.toml Cargo.toml;
+			cp -f ~/.env/tpl/wasmtime/main.rs src/main.rs;
+			cp -f ~/.env/tpl/wasmtime/build.sh .;
 			cargo new --lib mylib;cd mylib;	
-			cp -f ~/.env/xcargo/wasmtime/CargoWasmtime.toml Cargo.toml;
-			cp -f ~/.env/xcargo/wasmtime/lib.rs src/lib.rs;
-			cp -f ~/.env/xcargo/wasmtime/build2.sh build.sh;
+			cp -f ~/.env/tpl/wasmtime/CargoWasmtime.toml Cargo.toml;
+			cp -f ~/.env/tpl/wasmtime/lib.rs src/lib.rs;
+			cp -f ~/.env/tpl/wasmtime/build2.sh build.sh;
 			cd ..;
 			echo 'create wasmtime project';
 		   "
 
 alias xcargowasm-pack="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
-			cp -a ~/.env/xcargo/wasm-pack/tpl/crate .;
-			cp ~/.env/xcargo/wasm-pack/tpl2/crate/index.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl/index.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl/index.html .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl/webpack.config.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl/package.json .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl/build.sh .;
+			cp -a ~/.env/tpl/wasm-pack/tpl/crate .;
+			cp ~/.env/tpl/wasm-pack/tpl2/crate/index.js .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl/index.js .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl/index.html .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl/webpack.config.js .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl/package.json .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl/build.sh .;
 			echo 'create wasm-pack project';
 			"
 
 alias xcargowasm-pack2="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
-			cp -a ~/.env/xcargo/wasm-pack/tpl2/crate .;
-			cp ~/.env/xcargo/wasm-pack/tpl2/crate/index.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/index.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/index.html .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/webpack.config.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/package.json .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl2/build.sh .;
+			cp -a ~/.env/tpl/wasm-pack/tpl2/crate .;
+			cp ~/.env/tpl/wasm-pack/tpl2/crate/index.js .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl2/index.js .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl2/index.html .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl2/webpack.config.js .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl2/package.json .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl2/build.sh .;
 			echo 'create wasm-pack2 project';
 			"
 alias xcargowasm-pack3="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
-			cp -a ~/.env/xcargo/wasm-pack/tpl3/crate .;
-			cp ~/.env/xcargo/wasm-pack/tpl3/crate/index.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl3/index.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl3/index.html .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl3/webpack.config.js .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl3/package.json .;
-		  	cp -f ~/.env/xcargo/wasm-pack/tpl3/build.sh .;
+			cp -a ~/.env/tpl/wasm-pack/tpl3/crate .;
+			cp ~/.env/tpl/wasm-pack/tpl3/crate/index.js .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl3/index.js .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl3/index.html .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl3/webpack.config.js .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl3/package.json .;
+		  	cp -f ~/.env/tpl/wasm-pack/tpl3/build.sh .;
 			echo 'create wasm-pack3 project';
 			"
 
 alias xcargoproj="rm -rf myproj; mkdir myproj;cd myproj;
-		  cp -a ~/.env/xcargo/proj/* .;"
+		  cp -a ~/.env/tpl/proj/* .;"
 
 alias xcargowasm-nodejs="rm -rf mynodejs; mkdir mynodejs; cd mynodejs;
-			cp -a ~/.env/xcargo/wasm-pack/notpl/* .;
+			cp -a ~/.env/tpl/wasm-pack/notpl/* .;
 			echo 'create wasm-nodejs project';
 			"
 
 alias xcargowasm-nodejs2="rm -rf mynodejs; mkdir mynodejs;cd mynodejs;
-			cp -a ~/.env/xcargo/wasm-pack/notpl2/* .;
+			cp -a ~/.env/tpl/wasm-pack/notpl2/* .;
 			echo 'create wasm-nodejs2 project';
 			"
 
 alias xcargowasm-wasmer="rm -rf mywasmer;mkdir mywasmer;cd mywasmer;
-			cp -a ~/.env/xcargo/wasmer/* .;
+			cp -a ~/.env/tpl/wasmer/* .;
 			echo 'create wasmer project';
 			"
