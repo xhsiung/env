@@ -1,0 +1,2 @@
+alias xuglifyjs="storecmd 'cmd@sudo npm install uglifyjs-es -g' \
+			  'cmd@uglifyjs \$some.js -o main.js' "

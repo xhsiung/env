@@ -1,11 +1,21 @@
-import React from 'react';
+import React,{useState , useEffect }  from 'react'
 
-class Butotn extends React.Component{
-	render(){
-		return(
-			<div> MyButton</div>
-		)
-	}
+function Butotn( props ){
+	//count=0 , setCount(0);
+	const [count, setCount] = useState( 0 );
+
+	//mount
+	useEffect( () => {
+		console.log("Count", count);
+	})
+
+	//view
+	return(
+		<>			
+			Count: { count }
+			<button onClick={ () => setCount( count +1 )}>Click me</button>
+		</>
+	)
 }
 
 export default Butotn;

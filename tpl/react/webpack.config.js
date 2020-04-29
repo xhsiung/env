@@ -1,13 +1,13 @@
-
 var path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 	entry:  './src/index.js',
 	output: {
 		path: path.join(__dirname, 'build'),
-		filename: 'bundle.js',
+		filename: 'index.bundle.js',
 	},
 	module: {
 		rules: [
@@ -26,12 +26,14 @@ module.exports = {
 	plugins: [
 	      new HtmlWebPackPlugin({
 			template: './src/index.html'
-	      })
+	      }),
+	     new webpack.HotModuleReplacementPlugin()
 	],
 	optimization: {
 		minimizer: [new TerserPlugin()],
 	},
 	devServer: {
-		port: 9000
+		port: 9000,
+		hot: true
 	}
 }
