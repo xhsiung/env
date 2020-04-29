@@ -1,7 +1,7 @@
 
 var path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
 	entry:  './src/index.js',
@@ -29,7 +29,7 @@ module.exports = {
 	      })
 	],
 	optimization: {
-		minimizer: [new UglifyJsPlugin()],
+		minimizer: [new TerserPlugin()],
 	},
 	devServer: {
 		port: 9000
