@@ -6,7 +6,10 @@ function Butotn( props ){
 
 	//mount
 	useEffect( () => {
-		console.log("Count", count);
+		console.log("Count", count);		
+		//ummount
+		return() =>{
+		};
 	})
 
 	//view
