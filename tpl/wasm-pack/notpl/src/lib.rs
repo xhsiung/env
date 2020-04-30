@@ -18,20 +18,20 @@ extern "C" {
     pub fn emit(this: &EventEmitter, name: &str, value: &JsValue) -> bool;
 }
 
-#[wasm_bindgen]
-pub fn EventEmit() -> EventEmitter{
-    EventEmitter::new()
+thread_local! {
+    static EV: EventEmitter = EventEmitter::new();
 }
 
 #[wasm_bindgen]
-pub fn on(event: &EventEmitter, name: &str, listener: &js_sys::Function){
-    event.on(name , listener );
+pub fn on( name: &str, listener: &js_sys::Function){
+    EV.with(|ev| {
+        ev.on( name , listener)
+    })
 }
 
 #[wasm_bindgen]
-pub fn emit(event: &EventEmitter, name: &str, value: &JsValue){
-    //let conf: Conf  = value.i:q
-    //
-    // nto_serde().unwrap();
-    event.emit(name , value );
+pub fn emit(name: &str, value: &JsValue){
+    EV.with(|ev| {
+        ev.emit( name , value)
+    });
 }
