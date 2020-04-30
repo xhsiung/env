@@ -6,16 +6,16 @@ use wasm_bindgen::JsCast;
 #[wasm_bindgen(module = "events")]
 extern "C" {
     #[wasm_bindgen(js_name = default)]
-    pub type EventEmitter;
+    type EventEmitter;
 
     #[wasm_bindgen(constructor)]
-    pub fn new() -> EventEmitter;
+    fn new() -> EventEmitter;
 
     #[wasm_bindgen(js_class = "default", method)]
-    pub fn on(this: &EventEmitter, name: &str, listener: &js_sys::Function);
+    fn on(this: &EventEmitter, name: &str, listener: &js_sys::Function);
 
     #[wasm_bindgen(js_class = "default", method)]
-    pub fn emit(this: &EventEmitter, name: &str, value: &JsValue) -> bool;
+    fn emit(this: &EventEmitter, name: &str, value: &JsValue) -> bool;
 }
 
 thread_local! {
