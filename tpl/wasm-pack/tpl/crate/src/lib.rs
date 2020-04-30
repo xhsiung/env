@@ -57,9 +57,10 @@ pub fn run() {
     myjson();
     mylistener();
     //web_sys::console::log_2(&"add:".into(),&add(1,2).into());
+    run2();
 }
 
-#[wasm_bindgen(start)]
+#[wasm_bindgen]
 pub fn run2() {
     //call JS
     let var1 = "test1";
