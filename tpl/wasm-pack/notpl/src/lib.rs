@@ -25,13 +25,13 @@ thread_local! {
 #[wasm_bindgen]
 pub fn on( name: &str, listener: &js_sys::Function){
     EV.with(|ev| {
-        ev.on( name , listener)
-    })
+        ev.on( name , listener);
+    });
 }
 
 #[wasm_bindgen]
 pub fn emit(name: &str, value: &JsValue){
     EV.with(|ev| {
-        ev.emit( name , value)
+        ev.emit( name , value);
     });
 }
