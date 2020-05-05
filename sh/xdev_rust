@@ -1,5 +1,6 @@
 alias xdev_rust="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh; \
 			curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh; \
-			curl https://wasmtime.dev/install.sh -sSf | bash;"
+			curl https://wasmtime.dev/install.sh -sSf | bash; \
+			curl https://get.wasmer.io -sSfL | sh; "
 
 ###curl https://get.wasmer.io -sSfL | sh;
