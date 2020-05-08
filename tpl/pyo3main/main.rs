@@ -14,7 +14,8 @@ fn main() -> Result<(),()> {
 fn main_(py: Python) -> PyResult<()>{
     //sys.path.append("/home/alex")
     let os = py.import("os")?;
-    let libpath = os.call0("getcwd")?.extract::<&str>()?;
+    let mut libpath = os.call0("getcwd")?.extract::<String>()?;
+    libpath.push_str("/lib");
     //println!("{:?}", libpath);
 
     let sys = py.import("sys")?;
