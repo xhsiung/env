@@ -66,8 +66,13 @@ alias xcargo_wasm-wasmer="rm -rf mywasmer;mkdir mywasmer;cd mywasmer;
 			cp -a ~/.env/tpl/wasmer/* .;
 			echo 'create wasmer project';
 			"
-alias xcargo_pyo3="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
-                        cp -a ~/.env/tpl/pyo3mo/* .;
-                        echo 'create mypyo3 project';
+alias xcargo_pyo3-lib="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
+                        cp -a ~/.env/tpl/pyo3lib/* .;
+                        echo 'create mypyo3-lib project';
+                        "
+
+alias xcargo_pyo3-main="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
+                        cp -a ~/.env/tpl/pyo3main/* .;
+                        echo 'create mypyo3-main project';
                         "
 
