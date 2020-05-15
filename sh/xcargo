@@ -76,3 +76,13 @@ alias xcargo_pyo3-main="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
                         echo 'create mypyo3-main project';
                         "
 
+alias xcargo_pyo3-main2="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
+                        cp -a ~/.env/tpl/pyo3main2/* .;
+                        echo 'create mypyo3-main2 project';
+                        "
+
+alias xcargo_pyo3-main3="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
+                        cp -a ~/.env/tpl/pyo3main3/* .;
+                        echo 'create mypyo3-main3 project';
+                        "
+
