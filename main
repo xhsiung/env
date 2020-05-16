@@ -36,7 +36,7 @@ git config --global user.name "xhsiung"
 git config --global push.default current
 
 #syn env ################################################################################################
-alias xenvsync="mypwd=`pwd`;
+alias @envsync="mypwd=`pwd`;
 		cd /tmp; git clone https://github.com/xhsiung/env &&
 		rm -rf ~/.env && mv env ~/.env &&
 		ln -sf ~/.env/tmux.conf ~/.tmux.conf;
@@ -45,7 +45,7 @@ alias xenvsync="mypwd=`pwd`;
 		cd $mypwd;
 		. ~/.env/main;"
 
-alias xenvpush="mypwd=`pwd`;cd ~/.env;
+alias @envpush="mypwd=`pwd`;cd ~/.env;
 		git add .;
 		git commit -m 'fix main';
 		git push origin;
