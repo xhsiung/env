@@ -1,0 +1,15 @@
+alias @nodejs_wasm-lib="rm -rf mynodejs; mkdir mynodejs; cd mynodejs;
+			cp -a ~/.env/tpl/wasm-pack/notpl/* .;
+			echo 'create xnodejs_wasm-lib project';
+			"
+
+alias @nodejs_wasm-lib2="rm -rf mynodejs; mkdir mynodejs;cd mynodejs;
+			cp -a ~/.env/tpl/wasm-pack/notpl2/* .;
+			echo 'create xnodejs_wasm-lib2 project';
+			"
+
+alias @nodejs_neon-install="storecmd 'cmd@sudo npm install -g neon-cli'"
+
+alias @nodejs_neon-lib="storecmd 'cmd@neon new myproj' \
+                         'cmd@neon build --release'"
+

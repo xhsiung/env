@@ -1,10 +1,10 @@
-alias xmountBind="storecmd 'cmd@mount /dev/looXp2 -t ext4 /media/tmp' \
+alias @mountBind="storecmd 'cmd@mount /dev/looXp2 -t ext4 /media/tmp' \
                        'cmd@mount --bind /dev /media/card/dev' \
                        'cmd@mount --bind /sys /media/card/sys' \
                        'cmd@mount --bind /proc /media/card/proc' \
                        'cmd@mount --bind /pts /media/card/pts'"
 
-alias xmountUnBind="storecmd 'cmd@losetup -d  /dev/loopXp2' \
+alias @mountUnBind="storecmd 'cmd@losetup -d  /dev/loopXp2' \
                        'cmd@unmount  /media/card/dev' \
                        'cmd@unmount  /media/card/sys' \
                        'cmd@ummount  /media/card/proc' \

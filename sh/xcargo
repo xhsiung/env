@@ -1,11 +1,11 @@
-alias xcargo="storecmd  'cmd@rustc --print target-list'  \
+alias @cargo="storecmd  'cmd@rustc --print target-list'  \
 			'cmd@rustup target add wasm32-unknown-unknown' \
 			'cmd@cargo new --bin|lib myproj' \
 			'cmd@cargo build --target wasm32-unknown-unknown --release'"
 
-alias xcargoTest="storecmd 'run@cargo test -- --nocapture'"
+alias @cargoTest="storecmd 'run@cargo test -- --nocapture'"
 
-alias xcargo_wasm-wasmtime="cargo new mywasmtime; cd mywasmtime;
+alias @cargo_wasm-wasmtime="cargo new mywasmtime; cd mywasmtime;
 			cp -f ~/.env/tpl/wasmtime/CargoWasm.toml Cargo.toml;
 			cp -f ~/.env/tpl/wasmtime/main.rs src/main.rs;
 			cp -f ~/.env/tpl/wasmtime/build.sh .;
@@ -17,71 +17,44 @@ alias xcargo_wasm-wasmtime="cargo new mywasmtime; cd mywasmtime;
 			echo 'create wasmtime project';
 		   "
 
-alias xcargo_wasm-pack="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
-			cp -a ~/.env/tpl/wasm-pack/tpl/crate .;
-			cp ~/.env/tpl/wasm-pack/tpl2/crate/index.js .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl/index.js .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl/index.html .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl/webpack.config.js .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl/package.json .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl/build.sh .;
+alias @cargo_wasm-pack="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
+			cp -a ~/.env/tpl/wasm-pack/tpl/* .;
 			echo 'create wasm-pack project';
 			"
 
-alias xcargo_wasm-pack2="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
-			cp -a ~/.env/tpl/wasm-pack/tpl2/crate .;
-			cp ~/.env/tpl/wasm-pack/tpl2/crate/index.js .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl2/index.js .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl2/index.html .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl2/webpack.config.js .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl2/package.json .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl2/build.sh .;
+alias @cargo_wasm-pack2="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
+		  	cp -a ~/.env/tpl/wasm-pack/tpl2/* .;
 			echo 'create wasm-pack2 project';
 			"
-alias xcargo_wasm-pack3="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
-			cp -a ~/.env/tpl/wasm-pack/tpl3/crate .;
-			cp ~/.env/tpl/wasm-pack/tpl3/crate/index.js .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl3/index.js .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl3/index.html .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl3/webpack.config.js .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl3/package.json .;
-		  	cp -f ~/.env/tpl/wasm-pack/tpl3/build.sh .;
+
+alias @cargo_wasm-pack3="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
+			cp -a ~/.env/tpl/wasm-pack/tpl3/* .;
 			echo 'create wasm-pack3 project';
 			"
 
-alias xcargoproj="rm -rf myproj; mkdir myproj;cd myproj;
+alias @cargoproj="rm -rf myproj; mkdir myproj;cd myproj;
 		  cp -a ~/.env/tpl/proj/* .;"
 
-alias xcargo_wasm-nodejs="rm -rf mynodejs; mkdir mynodejs; cd mynodejs;
-			cp -a ~/.env/tpl/wasm-pack/notpl/* .;
-			echo 'create wasm-nodejs project';
-			"
-
-alias xcargo_wasm-nodejs2="rm -rf mynodejs; mkdir mynodejs;cd mynodejs;
-			cp -a ~/.env/tpl/wasm-pack/notpl2/* .;
-			echo 'create wasm-nodejs2 project';
-			"
-
-alias xcargo_wasm-wasmer="rm -rf mywasmer;mkdir mywasmer;cd mywasmer;
+alias @cargo_wasm-wasmer="rm -rf mywasmer;mkdir mywasmer;cd mywasmer;
 			cp -a ~/.env/tpl/wasmer/* .;
 			echo 'create wasmer project';
 			"
-alias xcargo_pyo3-lib="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
+alias @cargo_pyo3-lib="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
                         cp -a ~/.env/tpl/pyo3lib/* .;
                         echo 'create mypyo3-lib project';
                         "
 
-alias xcargo_pyo3-main="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
+alias @cargo_pyo3-main="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
                         cp -a ~/.env/tpl/pyo3main/* .;
                         echo 'create mypyo3-main project';
                         "
 
-alias xcargo_pyo3-main2="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
+alias @cargo_pyo3-main2="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
                         cp -a ~/.env/tpl/pyo3main2/* .;
                         echo 'create mypyo3-main2 project';
                         "
 
-alias xcargo_pyo3-main3="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
+alias @cargo_pyo3-main3="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
                         cp -a ~/.env/tpl/pyo3main3/* .;
                         echo 'create mypyo3-main3 project';
                         "

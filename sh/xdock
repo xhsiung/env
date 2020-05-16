@@ -1,53 +1,53 @@
-alias xdockBuild="storecmd 'cmd@docker build -t \$mybuntu .'"
+alias @dockBuild="storecmd 'cmd@docker build -t \$mybuntu .'"
 
-alias xdockRun="storecmd 'run@docker images' \
+alias @dockRun="storecmd 'run@docker images' \
 			 'cmd@docker run -it --rm -p 8088:80 -v /home/alex/myalex:/home/alex \$REPOSITORY /bin/bash' \
 			 'cmd@docker run -it --rm -v /home/alex/myalex:/home/alex \$REPOSITORY /bin/bash'"
 
-alias xdockExe="storecmd 'run@docker ps -a' \
+alias @dockExe="storecmd 'run@docker ps -a' \
 			 'cmd@docker exec -it \$ContainerID /bin/bash'"
 
 
-alias xdockVolume="storecmd 'run@docker volume ls'"
-alias xdockNetwork="storecmd 'cmd@docker network ls'"
+alias @dockVolume="storecmd 'run@docker volume ls'"
+alias @dockNetwork="storecmd 'cmd@docker network ls'"
 
-alias xdockImage="storecmd 'cmd@docker images'"
-alias xdockImagePs="storecmd 'cmd@docker images ps -a'"
-alias xdockImageDelAll="storecmd 'cmd@docker images -q | xargs docker rmi -f'"
+alias @dockImage="storecmd 'cmd@docker images'"
+alias @dockImagePs="storecmd 'cmd@docker images ps -a'"
+alias @dockImageDelAll="storecmd 'cmd@docker images -q | xargs docker rmi -f'"
 
-alias xdockContainerPs="storecmd 'cmd@docker container ps -a'"
-alias xdockContainer="storecmd 'cmd@docker contianer rm \$contianer' \
+alias @dockContainerPs="storecmd 'cmd@docker container ps -a'"
+alias @dockContainer="storecmd 'cmd@docker contianer rm \$contianer' \
                                'cmd@docker contianer start \$contianer' \
                                'cmd@docker contianer stop \$contianer' 
                                "
 
 
-alias xdockStackDeploy="storecmd 'cmd@docker swarm init' \
+alias @dockStackDeploy="storecmd 'cmd@docker swarm init' \
 				 'cmd@docker stack deploy -c docker-compose.yml \$my'"
 
 
-alias xdockCommit="storecmd 'run@docker ps -a' \
+alias @dockCommit="storecmd 'run@docker ps -a' \
 			    'cmd@docker commit -m \$mypro \$ContianerID  \$mypro:1.0'"
 
-alias xdockExportImport="storecmd 'cmd@docker ps -a' \
+alias @dockExportImport="storecmd 'cmd@docker ps -a' \
 				  'cmd@docker import \$ContainerID myimag.tar' \
 				  'cmd@docker export \$ContainerID > myimag.tar'"
 
-alias xdockCompose="storecmd   'cmd@docker-compose up  -d -f xxx.yml' \
+alias @dockCompose="storecmd   'cmd@docker-compose up  -d -f xxx.yml' \
 			       'cmd@docker-compose down   -f xxx.yml' \
 			       'cmd@docker-compose stop   -f xxx.yml' \
 			       'cmd@docker-compose start  -f xxx.yml' "
 
-alias xdockComposeInstall="sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose; \
+alias @dockComposeInstall="sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose; \
 			   sudo chmod +x /usr/local/bin/docker-compose"
 
-alias xdockSwarmInit="storecmd  'cmd@docker swarm init --advertise-addr xx.xx.xx.xx'"
-alias xdockSwarmQueryToken="storecmd  'run@docker swarm join-token -q worker'"
+alias @dockSwarmInit="storecmd  'cmd@docker swarm init --advertise-addr xx.xx.xx.xx'"
+alias @dockSwarmQueryToken="storecmd  'run@docker swarm join-token -q worker'"
 
-alias xdockSwarmNode="storecmd  'run@docker node ls'"
-alias xdockSwarmNodeUpdate="storecmd  'run@docker node ls' \
+alias @dockSwarmNode="storecmd  'run@docker node ls'"
+alias @dockSwarmNodeUpdate="storecmd  'run@docker node ls' \
 				      'cmd@docker node update \$1_ID --label-add mysql123=true'"
 
-alias xdockSwarmJoin="storecmd 'cmd@docker swarm join --token \$Token xx.xx.xx.xx:2377'"
-alias xdockSwarmDeploy="storecmd 'cmd@docker deploy --compose-file docker-compose.yml MY_STACK123'"
+alias @dockSwarmJoin="storecmd 'cmd@docker swarm join --token \$Token xx.xx.xx.xx:2377'"
+alias @dockSwarmDeploy="storecmd 'cmd@docker deploy --compose-file docker-compose.yml MY_STACK123'"
 

@@ -1,2 +1,0 @@
-alias xneon="storecmd   'cmd@neon new $myproj' \
-			'cmd@neon build --release'"
