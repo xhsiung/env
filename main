@@ -1,4 +1,4 @@
-#alex env ##############################################################################################
+#alex env #################################################################################
 if [ -f /etc/profile.d/node_env.sh ]; then
 	. /etc/profile.d/node_env.sh
 fi
@@ -35,7 +35,7 @@ git config --global user.email "xhsiung@gmail.com"
 git config --global user.name "xhsiung"
 git config --global push.default current
 
-#syn env ################################################################################################
+#syn env ###############################################################################
 alias @envsync="mypwd=`pwd`;
 		cd /tmp; git clone https://github.com/xhsiung/env &&
 		rm -rf ~/.env && mv env ~/.env &&

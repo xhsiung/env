@@ -47,6 +47,7 @@ fn hello2(mut cx: FunctionContext) -> JsResult<JsString> {
     Ok(cx.string(x))
 }
 
+//neon start
 register_module!(mut cx, {
     cx.export_function("hello" , hello);
     cx.export_function("hello2" , hello2);

@@ -14,3 +14,13 @@ alias @nodejs_neon-lib="rm -rf mynodejs; mkdir mynodejs;cd mynodejs;
 			cp -a ~/.env/tpl/nodepy/* .;
 			echo 'create xnodejs_nodepy project';
 			"
+
+alias @nodejs_neon-lib-async="rm -rf mynodejs; mkdir mynodejs;cd mynodejs; 
+			      cp -a ~/.env/tpl/nodepyasync/* .;
+			      echo 'create xnodejs_nodepyasync project';
+			     "
+
+alias @nodejs_neon-lib-async2="rm -rf mynodejs; mkdir mynodejs;cd mynodejs; 
+			      cp -a ~/.env/tpl/nodepyasync2/* .;
+			      echo 'create xnodejs_nodepyasync2 project';
+			     "
