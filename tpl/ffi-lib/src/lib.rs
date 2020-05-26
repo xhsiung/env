@@ -30,8 +30,7 @@ pub extern fn myname( s: *const c_schar ) -> *mut c_schar {
     x1.push_str(" myjohn");
     //let mut s = String::from("alex");
 
-    let cstr = CString::new( x1 ).unwrap();
-    cstr.into_raw()
+    CString::new(x1).unwrap().into_raw()
 }
 
 #[no_mangle]
