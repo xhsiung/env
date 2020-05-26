@@ -1,0 +1,14 @@
+alias @ffi-lib_int-char-arr="rm -rf myffi; mkdir myffi; cd myffi;
+			    cp -a ~/.env/tpl/ffi-lib/* .;
+			    echo 'create ffi-lib project';
+			    "
+
+alias @ffi-lib_custrom-type="rm -rf myffi; mkdir myffi; cd myffi;
+			     cp -a ~/.env/tpl/ffi-lib-type/* .;
+			     echo 'create ffi-lib_custom-type project';
+			     "
+
+alias @ffi-lib_struct="rm -rf myffi; mkdir myffi; cd myffi;
+			    cp -a ~/.env/tpl/ffi-lib-struct/* .;
+			    echo 'create ffi-lib_struct project';
+			    "
