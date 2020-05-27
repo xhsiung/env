@@ -22,3 +22,14 @@ alias @wasm-pack3="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
                         cp -a ~/.env/tpl/wasm-pack/tpl3/* .;
                         echo 'create wasm-pack3 project';
                         "
+
+alias @wasm-wasmtime="cargo new mywasmtime; cd mywasmtime;
+                        cp -a ~/.env/tpl/wasmtime/* .;
+                        echo 'create wasmtime project';
+                        "
+
+alias @wasm-wasmer="rm -rf mywasmer;mkdir mywasmer;cd mywasmer;
+                        cp -a ~/.env/tpl/wasmer/* .;
+                        echo 'create wasmer project';
+                        "
+

@@ -5,22 +5,6 @@ alias @cargo="storecmd  'cmd@rustc --print target-list'  \
 
 alias @cargoTest="storecmd 'run@cargo test -- --nocapture'"
 
-alias @cargo_wasm-wasmtime="cargo new mywasmtime; cd mywasmtime;
-			cp -f ~/.env/tpl/wasmtime/CargoWasm.toml Cargo.toml;
-			cp -f ~/.env/tpl/wasmtime/main.rs src/main.rs;
-			cp -f ~/.env/tpl/wasmtime/build.sh .;
-			cargo new --lib mylib;cd mylib;	
-			cp -f ~/.env/tpl/wasmtime/CargoWasmtime.toml Cargo.toml;
-			cp -f ~/.env/tpl/wasmtime/lib.rs src/lib.rs;
-			cp -f ~/.env/tpl/wasmtime/build2.sh build.sh;
-			cd ..;
-			echo 'create wasmtime project';
-		   "
-
-alias @cargo_wasm-wasmer="rm -rf mywasmer;mkdir mywasmer;cd mywasmer;
-			cp -a ~/.env/tpl/wasmer/* .;
-			echo 'create wasmer project';
-			"
 
 alias @cargoproj="rm -rf myproj; mkdir myproj;cd myproj;
 		  cp -a ~/.env/tpl/proj/* .;"
