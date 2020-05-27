@@ -1,0 +1,24 @@
+alias @wasm-lib_nodejs="rm -rf mywasmnodejs; mkdir mywasmnodejs; cd mywasmnodejs;
+                        cp -a ~/.env/tpl/wasm-pack/notpl/* .;
+                        echo 'create wasm-lib_nodejs project';
+                        "
+
+alias @wasm-lib2_nodejs="rm -rf mywasmnodejs; mkdir mywasmnodejs;cd mywasmnodejs;
+                        cp -a ~/.env/tpl/wasm-pack/notpl2/* .;
+                        echo 'create wasm-lib2_nodejs project';
+                        "
+
+alias @wasm-pack="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
+                        cp -a ~/.env/tpl/wasm-pack/tpl/* .;
+                        echo 'create wasm-pack project';
+                        "
+
+alias @wasm-pack2="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
+                        cp -a ~/.env/tpl/wasm-pack/tpl2/* .;
+                        echo 'create wasm-pack2 project';
+                        "
+
+alias @wasm-pack3="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
+                        cp -a ~/.env/tpl/wasm-pack/tpl3/* .;
+                        echo 'create wasm-pack3 project';
+                        "

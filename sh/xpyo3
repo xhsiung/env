@@ -1,0 +1,14 @@
+alias @pyo3-lib="rm -rf mypyolib;mkdir mypyolib;cd mypyolib;
+                        cp -a ~/.env/tpl/pyo3lib/* .;
+                        echo 'create wasm-lib_pyo3 project';
+			"
+alias @pyo3-main="rm -rf mypyomain;mkdir mypyomain;cd mypyomain;
+                        cp -a ~/.env/tpl/pyo3main/* .;
+                        echo 'create mypyo3-main project';
+                        "
+
+alias @pyo3-main2="rm -rf mypyomain;mkdir mypyomain;cd mypyomain;
+                        cp -a ~/.env/tpl/pyo3main2/* .;
+                        echo 'create mypyo3-main2 project';
+                        "
+

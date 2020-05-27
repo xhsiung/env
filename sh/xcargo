@@ -17,40 +17,10 @@ alias @cargo_wasm-wasmtime="cargo new mywasmtime; cd mywasmtime;
 			echo 'create wasmtime project';
 		   "
 
-alias @cargo_wasm-pack="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
-			cp -a ~/.env/tpl/wasm-pack/tpl/* .;
-			echo 'create wasm-pack project';
-			"
-
-alias @cargo_wasm-pack2="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
-		  	cp -a ~/.env/tpl/wasm-pack/tpl2/* .;
-			echo 'create wasm-pack2 project';
-			"
-
-alias @cargo_wasm-pack3="rm -rf mywasmpack; mkdir mywasmpack; cd mywasmpack;
-			cp -a ~/.env/tpl/wasm-pack/tpl3/* .;
-			echo 'create wasm-pack3 project';
-			"
-
-alias @cargoproj="rm -rf myproj; mkdir myproj;cd myproj;
-		  cp -a ~/.env/tpl/proj/* .;"
-
 alias @cargo_wasm-wasmer="rm -rf mywasmer;mkdir mywasmer;cd mywasmer;
 			cp -a ~/.env/tpl/wasmer/* .;
 			echo 'create wasmer project';
 			"
-alias @cargo_pyo3-lib="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
-                        cp -a ~/.env/tpl/pyo3lib/* .;
-                        echo 'create mypyo3-lib project';
-                        "
 
-alias @cargo_pyo3-main="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
-                        cp -a ~/.env/tpl/pyo3main/* .;
-                        echo 'create mypyo3-main project';
-                        "
-
-alias @cargo_pyo3-main2="rm -rf mypyo3;mkdir mypyo3;cd mypyo3;
-                        cp -a ~/.env/tpl/pyo3main2/* .;
-                        echo 'create mypyo3-main2 project';
-                        "
-
+alias @cargoproj="rm -rf myproj; mkdir myproj;cd myproj;
+		  cp -a ~/.env/tpl/proj/* .;"
