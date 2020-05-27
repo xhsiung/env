@@ -25,7 +25,8 @@ impl MyClass{
 }
 
 #[no_mangle]
-pub extern fn myclass_new() -> Box<MyClass> {
+pub extern fn myclass_new() -> Box<MyClass> { //原先*mut MyClass
+    // Box::into_raw( Box::new( MyClass:new() ))
     Box::new(  MyClass::new() )
 }
 
