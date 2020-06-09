@@ -9,7 +9,9 @@ alias @dockExe="storecmd 'run@docker ps -a' \
 
 
 alias @dockVolume="storecmd 'run@docker volume ls'"
-alias @dockNetwork="storecmd 'cmd@docker network ls'"
+alias @dockNetwork="storecmd 'cmd@docker network rm xxxx' \
+                             'cmd@docker network ls'
+			     "
 
 alias @dockImage="storecmd 'cmd@docker images'"
 alias @dockImagePs="storecmd 'cmd@docker images ps -a'"

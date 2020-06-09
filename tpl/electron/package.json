@@ -1,0 +1,17 @@
+{
+  "name": "myelectron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts":{
+    "start":"electron .",
+    "build":"electron-builder -l snap tar.xz"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.0.2",
+    "electron-builder": "^22.7.0"
+  },
+  "dependencies": {
+  },
+  "nodeGypRebuild": "true"
+}

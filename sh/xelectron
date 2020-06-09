@@ -1,0 +1,4 @@
+alias @electron-proj="rm -rf myelectron;mkdir myelectron;cd myelectron;
+                        cp -a ~/.env/tpl/electron/* .;
+                        echo 'create myelectron project';
+                        "

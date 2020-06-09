@@ -1,0 +1,7 @@
+alias @vue="storecmd  'cmd@echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p' \
+		      'cmd@npm install -g #vue/cli'  \
+		      'cmd@vue create myvue' \
+		      'cmd@vue add element' \
+		      'cmd@vue run serve'
+		      "
+
