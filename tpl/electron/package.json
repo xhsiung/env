@@ -1,7 +1,7 @@
 {
   "name": "myelectron",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts":{
     "start":"electron .",
     "build":"electron-builder -l snap tar.xz"
