@@ -7,3 +7,8 @@ alias @electron-nodepy="rm -rf myelectron;mkdir myelectron;cd myelectron;
                         cp -a ~/.env/tpl/electron-nodepy/* .;
                         echo 'create myelectron-nodepy project';
                         "
+
+alias @electron-express="rm -rf myelectron;mkdir myelectron;cd myelectron;
+                        cp -a ~/.env/tpl/electron-express/* .;
+                        echo 'create myelectron-express project';
+                        "
