@@ -56,7 +56,6 @@ fn doAsync(mut cx: FunctionContext) -> JsResult<JsUndefined> {
     let jstr = cx.argument::<JsString>(0)?.value();
     let cb = cx.argument::<JsFunction>(1)?;
 
-    let ojstr = getPyRun( jstr );
     let task = MyTask { argument: ojstr };
     task.schedule( cb );
 

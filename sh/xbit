@@ -3,7 +3,7 @@ alias @bitBuildPackage="storecmd 'cmd@bitbake -s | grep \$1' \
 
 alias @bitBuildListTasks="storecmd 'cmd@bitbake -c listtasks \$recipeName'"
 alias @bitBuildClean="storecmd 'cmd@bitbake \$recipeName -c clean'"
-alias @bitBuild="storecmd 'cmd@bitbake \$recipeName' -c build"
+alias @bitBuild="storecmd 'cmd@bitbake \$recipeName -c build'"
 alias @bitTask="storecmd 'cmd@bitbake \$recipeName'"
 
 alias @bitSeachPack="storecmd 'cmd@bitbake -s | grep \$1'"

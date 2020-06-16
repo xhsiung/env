@@ -1,0 +1,6 @@
+alias @yarn="storecmd 'cmd@yarn global add xxx -dev' \
+		      'cmd@yarn remove xxx'  \
+		      'cmd@yarn add xxx --dev' \
+		      'cmd@yarn init'
+		      "
+

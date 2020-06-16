@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require('electron')
 const addon = require('nodepy');
 
 //render process load your custom addon like ex:require('nodepy'), change false , default true
-app.allowRendererProcessReuse= true
+app.allowRendererProcessReuse= false
 
 function createWindow() {
 	// Create the browser window.
