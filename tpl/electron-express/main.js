@@ -1,21 +1,37 @@
-const {app, BrowserWindow} = require("electron")
+const {app, ipcMain, BrowserWindow} = require("electron")
+const fs = require("fs")
 
 //express
-myapp = require('./noapp.js');
-myapp.listen(3333, function () {
+const { myapp }  = require('./noapp.js');
+
+myapp.listen( 3333,  function () {
 	console.log('Express server listening on');
 });
 
 function createWindow(){
-	let win = new BrowserWindow({
+	let mainWin = new BrowserWindow({
 		webPreferences: {
 			nodeIntegration: true
 		}
 	})
 
-	win.webContents.openDevTools();
+	mainWin.webContents.openDevTools();
 	//win.loadFile("index.html")
-	win.loadURL("http://localhost:3333")
+	mainWin.loadURL("http://localhost:3333")
+
+	//load front-end js
+	const jsStr = fs.readFileSync("./mojs/render.js",encoding="utf-8" );
+	mainWin.webContents.executeJavaScript(jsStr )
+
+	//IPC
+	ipcMain.on("main", (ev, args) => {
+		console.log(args);
+
+		ev.reply("submain", "pong");
+		//ev.sender.send("submain","pong2")
+		//mainWin.webContents.send("submain","pong3")
+	})
+
 }	
 
 app.whenReady().then(  createWindow  )
