@@ -1,0 +1,56 @@
+{
+  "_args": [
+    [
+      "@amilajack/neon-hello@1.0.2",
+      "C:\\Users\\user\\Documents\\examples-master\\electron-app"
+    ]
+  ],
+  "_from": "@amilajack/neon-hello@1.0.2",
+  "_id": "@amilajack/neon-hello@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-/vIU/5ojJZ+wSHkhjvpjW52vHyegMsxBFbJuFRdhnyjGff1bgwR7wiCiHFrpo1rrxuvGHHLA/wduCqR6U6PIxQ==",
+  "_location": "/@amilajack/neon-hello",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@amilajack/neon-hello@1.0.2",
+    "name": "@amilajack/neon-hello",
+    "escapedName": "@amilajack%2fneon-hello",
+    "scope": "@amilajack",
+    "rawSpec": "1.0.2",
+    "saveSpec": null,
+    "fetchSpec": "1.0.2"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@amilajack/neon-hello/-/neon-hello-1.0.2.tgz",
+  "_spec": "1.0.2",
+  "_where": "C:\\Users\\user\\Documents\\examples-master\\electron-app",
+  "author": {
+    "name": "Amila Welihinda",
+    "email": "amilajack@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/amilajack/neon-hello/issues"
+  },
+  "dependencies": {
+    "neon-cli": "^0.3.3"
+  },
+  "description": "a 'hello world' demo of Neon",
+  "homepage": "https://github.com/amilajack/neon-hello#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "@amilajack/neon-hello",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amilajack/neon-hello.git"
+  },
+  "scripts": {
+    "build": "neon build --release",
+    "install": "npm run build",
+    "test": "npm run build"
+  },
+  "version": "1.0.2"
+}

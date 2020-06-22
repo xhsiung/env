@@ -1,0 +1,1 @@
+..\..\node_modules\.bin\electron-build-env.cmd neon build --release
