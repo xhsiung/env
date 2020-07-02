@@ -1,7 +1,6 @@
-alias @vue="storecmd  'cmd@echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p' \
-		      'cmd@npm install -g #vue/cli'  \
-		      'cmd@vue create myvue' \
-		      'cmd@vue add element' \
-		      'cmd@vue run serve'
+alias @vueproj="storecmd  'run@rm -rf vueproj; mkdir vueproj;cd vueproj;cp -a ~/.env/tpl/vueproj/* .' \
+		      'cmd@npm install -g @vue/cli' \
+		      'cmd@vue init webpack vueproj'  \
+		      'cmd@cd vueproj && npm run dev '
 		      "
 
