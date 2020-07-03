@@ -16,7 +16,7 @@ alias @dockNetwork="storecmd 'cmd@docker network rm xxxx' \
 alias @dockImage="storecmd 'cmd@docker images'"
 alias @dockImagePs="storecmd 'cmd@docker images ps -a'"
 alias @dockImageDel_All="storecmd 'cmd@docker images -q | xargs docker rmi -f' \
-				 'cmd@docker image rmi -f xxxxx'"
+                                  'cmd@docker rmi -f xxxxx'"
 
 alias @dockContainerPs="storecmd 'cmd@docker container ps -a'"
 alias @dockContainer="storecmd 'cmd@docker contianer rm \$contianer' \
