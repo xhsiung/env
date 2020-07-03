@@ -54,3 +54,5 @@ alias @dockSwarmNodeUpdate="storecmd  'run@docker node ls' \
 alias @dockSwarmJoin="storecmd 'cmd@docker swarm join --token \$Token xx.xx.xx.xx:2377'"
 alias @dockSwarmDeploy="storecmd 'cmd@docker deploy --compose-file docker-compose.yml MY_STACK123'"
 
+alias @dockBackUP="storecmd 'cmd@docker save -o backup.tar xxxx:tag' \
+			    'cmd@docker load --input backup.tar'"
