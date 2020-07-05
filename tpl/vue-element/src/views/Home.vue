@@ -1,22 +1,17 @@
 <template>
-	<div>
-		{{  msg}}
+	<div> 
+		{{ msg}}	
 	</div>
 </template>
 
 <script>
 export default {
-	name: "My2",
+	name: "Home",	
 	data(){
 		return{
-			msg:"My2"
+			msg: "Home"
 		}
-	}
-}
+	}	  
+
+};
 </script>
-
-
-<style>
-
-</style>
-

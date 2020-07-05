@@ -1,6 +1,8 @@
-alias @vueproj="storecmd  'run@rm -rf vueproj; mkdir vueproj;cd vueproj;cp -a ~/.env/tpl/vueproj/* .' \
-		      'cmd@npm install -g @vue/cli' \
-		      'cmd@vue init webpack vueproj'  \
-		      'cmd@cd vueproj && npm run dev '
-		      "
+alias @vueproj="storecmd 'cmd@npm install -g @vue/cli' \
+		         'cmd@vue create vueproj'  \
+		         'cmd@vue add bootstrap-vue'  \
+		         'cmd@vue add element'"
 
+alias @vue-element="rm -rf vuepro;mkdir vuepro;cd vuepro;
+                        cp -a ~/.env/tpl/vue-element/* .;
+                        echo 'create vuepro element'"

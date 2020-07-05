@@ -1,6 +1,4 @@
 #!/bin/bash
-#run
+npm install 
 npm run serve
 
-#build
-npm run build
