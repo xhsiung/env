@@ -1,0 +1,4 @@
+alias @tsproj="rm -rf tsproj; mkdir tsproj; cd tsproj;
+                        cp -a ~/.env/tpl/tsproj/* .;
+                        echo 'create tsproj project';
+                        "

@@ -1,0 +1,1 @@
+alias @tree="storecmd 'cmd@tree -I \"aaa|bbb\" -L 2'"
