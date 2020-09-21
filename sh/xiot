@@ -1,0 +1,5 @@
+alias @iot="rm -rf myiot;mkdir myiot;cd myiot;
+                        cp -a ~/.env/tpl/iot/* .;
+                        echo 'create iot project';
+                        "
+
