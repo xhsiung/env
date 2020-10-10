@@ -1,4 +1,4 @@
-alias @vueproj="storecmd 'cmd@npm install -g @vue/cli' \
+alias @vueproj="storecmd 'cmd@npm install 0vue/cli -g' \
 		         'cmd@vue create vueproj'  \
 		         'cmd@vue add bootstrap-vue'  \
 		         'cmd@vue add element'"
