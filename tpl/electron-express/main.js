@@ -10,6 +10,8 @@ myapp.listen( 3333,  function () {
 
 function createWindow(){
 	let mainWin = new BrowserWindow({
+		//frame: false,
+		//transparent: true,
 		webPreferences: {
 			nodeIntegration: true
 		}
