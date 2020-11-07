@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron --enable-transparent-visuals --disable-gpu .",
     "build": "electron-builder -l snap tar.xz"
   },
   "license": "MIT",

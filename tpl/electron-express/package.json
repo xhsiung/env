@@ -4,7 +4,7 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "start": "electron --enable-transparent-visuals --disable-gpu ."
   },
   "devDependencies": {
     "electron": "^9.0.4"
