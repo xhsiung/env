@@ -16,7 +16,11 @@ function createWindow() {
 	mainWin.webContents.openDevTools()
 }
 
-app.whenReady().then(createWindow)
+app.whenReady().then(()=>{
+	setTimeout(()=>{
+	     	createWindow();
+        }, 100);
+})
 
 app.on('window-all-closed', () => {
 	console.log("quiit")
