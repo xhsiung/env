@@ -1,4 +1,4 @@
-alias @nvm_install="storecmd 'cmd@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash'"
+alias @nvm_install="storecmd 'cmd@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash'"
 alias @nvm="storecmd 'cmd@nvm install 12' \
                      'cmd@nvm alias default 12' \
                      'cmd@nvm use 12' \
