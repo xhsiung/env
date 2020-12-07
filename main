@@ -52,20 +52,23 @@ alias @envpush="mypwd=`pwd`;cd ~/.env;
 		cd $mypwd"
 
 storecmd(){
-	history -c
+	#history -c
 	echo "###########################################################"
 	for s in "$@"; do
 		action=`echo "$s" | awk -F@ '{print $1}'`
 		cmd=`echo "$s" | awk -F@ '{print $2$3$4$5$6$7$8$9}'`
 		echo "$action: $cmd"
-		echo $cmd >> ~/.bash_history
+		#echo $cmd >> ~/.bash_history
+		echo $cmd >> ~/.zsh_history
 		
-		if [ "$action" == "run" ];then
-			bash -c "$cmd"
+		if [[ "$action" == "run" ]] ;then
+			#bash -c "$cmd"
+			zsh -c "$cmd"
 		fi
+		echo "end"
 	done
 	echo ""
-	history -r
+	#history -r
 	#Ctrl + p --> paste or up_key
 }
 
