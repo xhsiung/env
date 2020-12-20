@@ -61,11 +61,18 @@ storecmd(){
 		action=`echo "$s" | awk -F@ '{print $1}'`
 		cmd=`echo "$s" | awk -F@ '{print $2$3$4$5$6$7$8$9}'`
 		echo "$action: $cmd"
-		echo $cmd >> ~/.bash_history
+		#echo $cmd >> ~/.bash_history
+		echo $cmd >> ~/.zsh_history
 		
+<<<<<<< HEAD
 		if [[ "$action" == "run" ]];then
+=======
+		if [[ "$action" == "run" ]] ;then
+			#bash -c "$cmd"
+>>>>>>> e59304aad909c0d9d0f51e96838d7a8dda807863
 			zsh -c "$cmd"
 		fi
+		echo "end"
 	done
 	echo ""
 	#history -r

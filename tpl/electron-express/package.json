@@ -7,7 +7,8 @@
     "start": "electron --enable-transparent-visuals --disable-gpu ."
   },
   "devDependencies": {
-    "electron": "^9.0.4"
+    "electron": "^9.0.4",
+    "electron-rebuild": "^2.3.4"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
