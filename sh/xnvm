@@ -1,7 +1,7 @@
-alias @nvm_install="storecmd 'cmd@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash'"
-alias @nvm="storecmd 'cmd@nvm install 12' \
-                     'cmd@nvm alias default 12' \
-                     'cmd@nvm use 12' \
+alias @nvm_install="storecmd 'cmd@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash'"
+alias @nvm="storecmd 'cmd@nvm install 14' \
+                     'cmd@nvm alias default 14' \
+                     'cmd@nvm use 14' \
                      'cmd@nvm ls' \
                      'cmd@nvm ls-remote' \
-                     'cmd@nvm reinstall-packages 12'"
+                     'cmd@nvm reinstall-packages 14'"

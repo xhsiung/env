@@ -1,3 +1,4 @@
+#!/bin/bash 
 #alex env #################################################################################
 if [ -f /etc/profile.d/node_env.sh ]; then
 	. /etc/profile.d/node_env.sh
@@ -52,20 +53,22 @@ alias @envpush="mypwd=`pwd`;cd ~/.env;
 		cd $mypwd"
 
 storecmd(){
-	history -c
+	#history -c
 	echo "###########################################################"
+	echo "begein"
 	for s in "$@"; do
+		#echo "--->0"
 		action=`echo "$s" | awk -F@ '{print $1}'`
 		cmd=`echo "$s" | awk -F@ '{print $2$3$4$5$6$7$8$9}'`
 		echo "$action: $cmd"
 		echo $cmd >> ~/.bash_history
 		
-		if [ "$action" == "run" ];then
-			bash -c "$cmd"
+		if [[ "$action" == "run" ]];then
+			zsh -c "$cmd"
 		fi
 	done
 	echo ""
-	history -r
+	#history -r
 	#Ctrl + p --> paste or up_key
 }
 
