@@ -24,6 +24,7 @@ if [ -d ~/Android/Sdk ]; then
 	export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_NDK:$PATH
 fi
 
+[[ -s "$HOME/.local/bin" ]] && export PATH=$HOME/.local/bin:$PATH
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 [[ -s "$HOME/.wasmer/wasmer.sh" ]] && source "$HOME/.wasmer/wasmer.sh"
 [[ -s "$HOME/.wasmtime" ]] && export PATH="$HOME/.wasmtime/bin:$PATH"
@@ -55,22 +56,20 @@ alias @envpush="mypwd=`pwd`;cd ~/.env;
 storecmd(){
 	#history -c
 	echo "###########################################################"
-	echo "begein"
 	for s in "$@"; do
 		action=`echo "$s" | awk -F@ '{print $1}'`
 		cmd=`echo "$s" | awk -F@ '{print $2$3$4$5$6$7$8$9}'`
 		echo "$action: $cmd"
-		#echo $cmd >> ~/.bash_history
+		echo $cmd >> ~/.bash_history
 		echo $cmd >> ~/.zsh_history
 		
 		if [[ "$action" == "run" ]] ;then
-			#bash -c "$cmd"
-			zsh -c "$cmd"
+			bash -c "$cmd"
+			#zsh -c "$cmd"
 		fi
-		echo "end"
 	done
 	echo ""
-	#history -r
+	history -r
 	#Ctrl + p --> paste or up_key
 }
 
