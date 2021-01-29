@@ -1,1 +1,1 @@
-alias @pyvenv="storecmd 'cmd@python3 -m venv myproj ; cd myproj ; source bin/activate'"
+alias @pyvenv="storecmd 'cmd@virtualenv myproj && cd myproj && source bin/activate'"
