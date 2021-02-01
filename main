@@ -24,7 +24,6 @@ if [ -d ~/Android/Sdk ]; then
 	export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_NDK:$PATH
 fi
 
-[[ -s "$HOME/.local/bin" ]] && export PATH=$HOME/.local/bin:$PATH
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 [[ -s "$HOME/.wasmer/wasmer.sh" ]] && source "$HOME/.wasmer/wasmer.sh"
 [[ -s "$HOME/.wasmtime" ]] && export PATH="$HOME/.wasmtime/bin:$PATH"
