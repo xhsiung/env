@@ -1,2 +1,7 @@
 alias @go_build="storecmd 'cmd@go tool dist list' \
 		          'cmd@GOOS=linux GOARCH=arm  go build main.go'" 
+
+alias @go="storecmd 'cmd@go mod init axsoho.com/xhsiung.go' \
+		    'cmd@go get github.com/xxx/package' \
+		    'cmd@go tidy' \
+		    'cmd@go list -m all'" 
