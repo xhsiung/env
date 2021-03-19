@@ -1,0 +1,1 @@
+alias @onedevStart="storecmd 'cmd@docker run -it --restart=always --name onedev  -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/onedev:/opt/onedev -p 6610:6610 -p 6611:6611 1dev/server'"
