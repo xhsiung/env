@@ -15,3 +15,5 @@ alias @gitMerge="storecmd 'cmd@git branch' \
 			  'cmd@git checkout \$branch' \
 			  'cmd@git merge \$otherBranch'"
 
+alias @gitRemote="storecmd 'cmd@git remote add tsmc-djweb http://axsoho.ddns.net:6610/projects/tsmc-djweb' \
+			   'cmd@git push tsmc-djweb'"
