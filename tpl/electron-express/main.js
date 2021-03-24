@@ -13,7 +13,8 @@ function createWindow(){
 		//frame: false,
 		//transparent: true,
 		webPreferences: {
-			nodeIntegration: true
+			nodeIntegration: true,
+			enableRemoteModule: true
 		}
 	})
 
