@@ -4,16 +4,22 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "start": "electron --enable-transparent-visuals --disable-gpu ."
+    "buildwin": "electron-builder -w",
+    "postinstall": "install-app-deps",
+    "start": "electron --enable-transparent-visuals --disable-gpu .",
+    "astart": "electron  ."
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "ini": "^2.0.0",
+    "morgan": "^1.10.0",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "electron": "^11.4.1",
+    "electron-builder": "^22.10.5",
     "electron-rebuild": "^2.3.5"
   }
 }
