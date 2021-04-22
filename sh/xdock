@@ -2,7 +2,8 @@ alias @dockBuild="storecmd 'cmd@docker build -t \$mybuntu .'"
 
 alias @dockRun="storecmd 'run@docker images' \
 			 'cmd@docker run -it --rm -p 8088:80 -v /home/alex/myalex:/home/alex \$REPOSITORY /bin/bash' \
-			 'cmd@docker run -it --rm -v /home/alex/myalex:/home/alex \$REPOSITORY /bin/bash'"
+			 'cmd@docker run -it --rm -v /home/alex/myalex:/home/alex \$REPOSITORY /bin/bash' \
+			 'cmd@docker run -it --rm \$REPOSITORY /bin/bash'"
 
 alias @dockExe="storecmd 'run@docker ps -a' \
 			 'cmd@docker exec -it \$ContainerID /bin/bash'"
@@ -18,9 +19,9 @@ alias @dockImageDel_All="storecmd 'cmd@docker images -q | xargs docker rmi -f' \
                                   'cmd@docker rmi -f xxxxx'"
 
 alias @dockContainerPs="storecmd 'cmd@docker container ps -a'"
-alias @dockContainer="storecmd 'cmd@docker contianer rm \$contianer' \
-                               'cmd@docker contianer start \$contianer' \
-                               'cmd@docker contianer stop \$contianer' 
+alias @dockContainer="storecmd 'cmd@docker container rm \$contianer' \
+                               'cmd@docker container start \$contianer' \
+                               'cmd@docker container stop \$contianer' 
                                "
 
 
