@@ -1,0 +1,1 @@
+alias @pc_driver="storecmd 'cmd@lspci -k' "
