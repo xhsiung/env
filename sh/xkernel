@@ -1,0 +1,2 @@
+alias @kernel="storecmd 'cmd@ubuntu-mainline-kernel.sh -c' \
+			 'cmd@ubuntu-mainline-kernel.sh -i 5.11.16'"
