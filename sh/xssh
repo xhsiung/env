@@ -1,3 +1,2 @@
 alias @sshNfRVNC="ssh -NfR 55900:localhost:5900 alex@axsoho.asuscomm.com -p 59022"
 alias @sshscprsa="storecmd 'cmd@cat ~/.ssh/id_rsa.pub |ssh \$remoteip -p 22 \"mkdir ~/.ssh;cat >> ~/.ssh/authorized_keys\"'"
-alias @sshtransfile="ssh alex@172.16.39.141"

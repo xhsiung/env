@@ -1,0 +1,7 @@
+alias @dbus-system="storecmd 'cmd@dbus-send --system --print-reply --dest=com.transtep.misbus  /com/transtep/misbus  org.freedesktop.DBus.Introspectable.Introspect'       \
+		             'cmd@dbus-send --system --print-reply --dest=com.transtep.misbus /com/transtep/misbus com.transtep.misbus.Hello string:\"aaa\" string:\"bbb\"'  \
+		             'cmd@dbus-send --system --print-reply --dest=com.transtep.misbus --type=signal /com/transtep/misbus com.transtep.misbus.StateChange'"
+
+alias @dbus-session="storecmd 'cmd@dbus-send --session --print-reply --dest=com.transtep.misbus  /com/transtep/misbus  org.freedesktop.DBus.Introspectable.Introspect'       \
+		              'cmd@dbus-send --session --print-reply --dest=com.transtep.misbus /com/transtep/misbus com.transtep.misbus.Hello string:\"aaa\" string:\"bbb\"'  \
+		              'cmd@dbus-send --session --print-reply --dest=com.transtep.misbus --type=signal /com/transtep/misbus com.transtep.misbus.StateChange'"
