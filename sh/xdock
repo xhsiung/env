@@ -1,6 +1,6 @@
 alias @dockBuild="storecmd 'cmd@docker build -t \$mybuntu .'"
 
-alias @dockRun="storecmd 'run@docker images' \
+alias @dockIt="storecmd 'run@docker images' \
 			 'cmd@docker run -it --rm -p 8088:80 -v /home/alex/myalex:/home/alex \$REPOSITORY /bin/bash' \
 			 'cmd@docker run -it --rm -v /home/alex/myalex:/home/alex \$REPOSITORY /bin/bash' \
 			 'cmd@docker run -it --rm \$REPOSITORY /bin/bash'"
