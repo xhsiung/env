@@ -2,6 +2,10 @@ https://docs.google.com/document/d/1XvKirsZHzBMELcFJVb_V74eLcVtQ4Q-9nR4PvwwlyQA/
 for openwrt v19.07.7 x86/x64
 feature docker support kernel
 
+//custom newconfig lite
+$make menuconfig
+$cat .config | grep -e =m -v > newconfig
+
 //sammple
 $git clone https://git.openwrt.org/openwrt/openwrt.git openwrt
 $cd openwrt
