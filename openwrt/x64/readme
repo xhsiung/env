@@ -1,4 +1,10 @@
-for openwrt v19.07.7  x86/x64
-feature docker support
 https://docs.google.com/document/d/1XvKirsZHzBMELcFJVb_V74eLcVtQ4Q-9nR4PvwwlyQA/edit
+for openwrt v19.07.7 x86/x64
+feature docker support kernel
 
+//sammple
+$git clone https://git.openwrt.org/openwrt/openwrt.git openwrt
+$cd openwrt
+$git tag
+$git checkout v19.07.7
+$cp newconfig .config
