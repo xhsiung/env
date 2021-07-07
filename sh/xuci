@@ -1,0 +1,5 @@
+alias @uci="storecmd 'cmd@uci show example' \
+		     'cmd@uci set example.my=interface' \
+                     'cmd@uci set example.my.ipaddr=\"192.168.0.123\"' \
+		     'cmd@uci commit'"
+
