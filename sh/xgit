@@ -3,9 +3,10 @@ alias @gitBranchAdd="storecmd 'cmd@git branch \$addBranch'"
 alias @gitBranchDel="storecmd 'cmd@git branch -d \$delBranch'"
 alias @gitBranchNewCheckout="storecmd 'cmd@git checkout -b \$branch'"
 
-alias @gitCommTag="storecmd 'cmd@git log --oneline' \
+alias @gitCommTag="storecmd 'cmd@git commit -m \"add detail\"' \
+			    'cmd@git log --oneline' \
   			    'cmd@git tag \$tag100 3d996b3' \
-			    'cmd@git commit -m \"add main\"'" 
+			    'cmd@git push \$Branch \$tagName'"  
 
 alias @gitCommBranch="storecmd 'cmd@git tag \$tag100' \
 			       'cmd@git commit -a -m \"add main\"'"
