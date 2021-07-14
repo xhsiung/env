@@ -1,5 +1,6 @@
-alias @openwrtpkg="rm -rf myhello;cp -a ~/.env/tpl/opwrt/myhello .; \
-			echo 'create openwrt myhelo pkg success';  \
-			echo 'add myhello --> openwrt/package/utils'; \
-			echo 'make menuconfig && add myhello'"
+alias @openwrtpkg="rm -rf myhello; \
+		cp -a ~/.env/tpl/opwrt/pkg/myhello .; \
+		echo 'create openwrt myhelo pkg success';  \
+		echo 'add myhello --> openwrt/package/utils'; \
+		echo 'make menuconfig && add myhello'"
 
