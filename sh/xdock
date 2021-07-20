@@ -9,6 +9,8 @@ alias @dockIt="storecmd 'run@docker images' \
 alias @dockExe="storecmd 'run@docker ps -a' \
 			 'cmd@docker exec -it \$ContainerID /bin/bash'"
 
+alias @dockDaemon="storecmd 'cmd@docker run -p 8080:80 --restart=always -d \$REPOSITORY' \
+			    'cmd@docker update --restart=no \$Container' "
 
 alias @dockVolume="storecmd 'run@docker volume ls'"
 alias @dockNetwork="storecmd 'cmd@docker network rm xxxx' \
