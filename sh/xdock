@@ -38,12 +38,13 @@ alias @dockExportImport="storecmd 'cmd@docker ps -a' \
 				  'cmd@docker import \$ContainerID myimag.tar' \
 				  'cmd@docker export \$ContainerID > myimag.tar'"
 
-alias @dockCompose="storecmd   'cmd@docker-compose up  -d -f xxx.yml' \
-			       'cmd@docker-compose down   -f xxx.yml' \
-			       'cmd@docker-compose stop   -f xxx.yml' \
-			       'cmd@docker-compose start  -f xxx.yml' "
+alias @dockCompose="storecmd 'cmd@docker-compose build' \
+			     'cmd@docker-compose up  -d -f xxx.yml' \
+			     'cmd@docker-compose down   -f xxx.yml' \
+			     'cmd@docker-compose stop   -f xxx.yml' \
+			     'cmd@docker-compose start  -f xxx.yml' "
 
-alias @dockComposeInstall="sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
+alias @dockComposeInstall="sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
 			   sudo chmod +x /usr/local/bin/docker-compose"
 
 alias @dockSwarmInit="storecmd  'cmd@docker swarm init --advertise-addr xx.xx.xx.xx'"
